@@ -29,16 +29,16 @@ public class Main {
 		System.out.println("ют╥б 3 : ");
 		String nick = sc.next();
 		
-		  System.out.println("|\\_/|");
-	      System.out.println("|q p|   /}");
-	      System.out.println("( 0 )\"\"\"\\");
-	      System.out.println("|\"^\"`    |");
-	      System.out.println("||_/=\\\\__|");
-	      
-	      System.out.println("\\    /\\");
-	        System.out.println(" )  ( ')");
-	        System.out.println("(  /  )");
-	        System.out.println(" \\(__)|");
+//		  System.out.println("|\\_/|");
+//	      System.out.println("|q p|   /}");
+//	      System.out.println("( 0 )\"\"\"\\");
+//	      System.out.println("|\"^\"`    |");
+//	      System.out.println("||_/=\\\\__|");
+//	      >++>
+//	      System.out.println("\\    /\\");
+//	        System.out.println(" )  ( ')");
+//	        System.out.println("(  /  )");
+//	        System.out.println(" \\(__)|");
 		
 //		
 //		VO vo = new VO(id, pw, nick);
