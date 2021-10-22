@@ -59,6 +59,25 @@ public class tamagotchi {
 			e.printStackTrace();
 		}
 	}
+	public int login(String id, String pw) {
+		getconn();
+		
+		sql = "select * from user1 where id = ? and pw = ?";
+		
+		try {
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			psmt.setString(2, pw);
+			rs = psmt.executeQuery();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return result;
+	}
 
 	public int insert(String id, String pw, String nick) {
 		// 하나의 기능이 시작되기 전에 꼭! 데이터베이스 연결 메소드 호출하기
@@ -66,7 +85,7 @@ public class tamagotchi {
 		getconn();
 
 		// 3.실행할 SQL문 작성
-		sql = "insert into member values(?,?,?)";
+		sql = "insert into user1 values(?,?,?)";
 
 		try {
 
@@ -81,9 +100,7 @@ public class tamagotchi {
 		} finally {
 			close();
 		}
-
 		return result;
-
 	}
 
 	public VO eat(int num) { // 먹는기능 구현
