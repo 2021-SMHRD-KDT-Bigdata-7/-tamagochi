@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		Print p =  new Print();
 		int lv = 1;
 		int hp = 100;

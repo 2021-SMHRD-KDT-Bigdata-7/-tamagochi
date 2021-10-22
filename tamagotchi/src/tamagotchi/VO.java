@@ -9,19 +9,24 @@ public class VO {
 	private int hp;
 	private int exp;
 	private int turn;
+	
 
-//	public VO() {
-//	}
+	public VO() {
+		this.hp = 100;
+		this.exp = 0;
+		this.turn = 0;
+		
+	}
 
-	public VO(String id, String pw, String nick, int lv, int hp, int exp, int turn) {
+	public VO(String id, String pw, String nick) {
 		
 		this.id = id;
 		this.pw = pw;
 		this.nick = nick;
-		this.lv = lv;
-		this.hp = hp;
-		this.exp = exp;
-		this.turn = turn;
+		this.lv = 1;
+		this.hp = 100;
+		this.exp = 0;
+		this.turn = 0;
 
 	}
 
@@ -68,6 +73,10 @@ public class VO {
 		this.nick = nick;
 	}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	
+
+	
 	
 	
 
