@@ -21,9 +21,9 @@ public class tamagotchi {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		
 	//2.DB¿¬°á
-		String url ="jdbc:oracle:thin:@192.168.1.230:1521:xe";
-		String user ="sun";
-		String password ="12345";
+		String url ="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+		String user ="cgi_2_1_1022";
+		String password ="smhrd1";
 		conn = DriverManager.getConnection(url, user, password);
 		
 		}catch (Exception e) {
