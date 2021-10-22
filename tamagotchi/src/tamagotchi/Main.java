@@ -3,7 +3,8 @@ package tamagotchi;
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		System.out.println("[1] 회원가입 [1] 회원가입 [1] 회원가입");
+
 
 	}
 
