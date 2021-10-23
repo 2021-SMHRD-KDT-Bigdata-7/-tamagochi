@@ -157,7 +157,7 @@ public class tamagotchi {
 	public VO exercise(int num) { // 운동 기능 구현
 
 		if (num == 1) {
-			System.out.println("헬스를 합니다. 으쌰라으쌰");
+			System.out.println("줄넘기를 합니다");
 			vo.setHp(vo.getHp() + 60);
 			vo.setExp(vo.getExp() + 60);
 			vo.setTurn(vo.getTurn() + 2);
