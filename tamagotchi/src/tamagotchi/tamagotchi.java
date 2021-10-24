@@ -214,10 +214,16 @@ public class tamagotchi {
 	}
 
 	public String all() {
+		if(vo.getLv() < 5) {
+			
+		}else if(vo.getLv() >= 5 && vo.getLv() < 10) {
+			
+		}else if(vo.getLv() >= 10) {
+			
+		}
 		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", exp=" + vo.getExp()
-				+ ", turn=" + vo.getTurn() + "Day=" + vo.getDay() +"]";
+		+ ", turn=" + vo.getTurn() + "Day=" + vo.getDay() +"]";
 	}
-
 	public void fail() { // 출력 기능 구현
 		System.out.println("돌발상황 발생");
 	}
