@@ -32,6 +32,7 @@ public class test2 {
 				if (tama.login(id, pw)==1) {				
 					System.out.println("환영합니다 "+id+" 님");
 					coin = 1;
+					break;
 				}else {
 					System.out.println("로그인 실패");
 					select = 0;
@@ -59,8 +60,9 @@ public class test2 {
 					System.out.println("개복치 등장!!!");
 				}else {
 					System.out.println("그래도 개복치!!!");
-				}
-				
+				}System.out.println("환영합니다 "+id+" 님");
+				coin = 1;
+				break;
 				
 			} else if (select == 3) {
 
@@ -134,7 +136,8 @@ public class test2 {
 				}
 			
 			
-		} else if(eventNum >= 21 && eventNum <= 30) {
+		}
+			} else if(eventNum >= 21 && eventNum <= 30) {
 			
 			while(true) {
 				System.out.println(nick + "졸림");
@@ -150,7 +153,7 @@ public class test2 {
 				} else {
 					System.out.println("욕구해결 안됨");
 					tama.plusHp(-5);
-				}
+				}}
 			
 		} else if(eventNum >= 21 && eventNum <= 30) {
 			
@@ -192,61 +195,61 @@ public class test2 {
 //	
 //      랜덤변수지정은 위치 지정 필요		
 		
-	}else if(select == 2) { //음식고르는 곳
-  
-  System.out.println("어떤 음식을 주시겠습니까.");
-  select = sc.nextInt();
-  
-  tama.eat();
-  
-  
-  
-	if(eventNum = 35){
-	System.out.println("가 독이 든 식사를 먹어버렸습니다.");
-  tama.fail();
-  tama.die();
- }else if(eventNum == 77){
- System.out.println("가 정말 먹고싶은 음식을 먹었습니다");
-// * 경험치 추가부분 구현..
-  }
-  
-   
-  
-  }else if (select == 3){
-   System.out.println("어떤 운동을 하겠습니까? ");
-   select = sc.nextInt();
-   
-   tama.exercise();
-   
-   if(eventNum = 35){
- 	System.out.println("가 운동을 하다가 치명상을 입었습니다.");
-   tama.fail();
-   tama.die();
-  }else if(eventNum == 77){
-  System.out.println("오늘따라 운동이 재밌었음.");
- //*  경험치 추가부분 구현..
-   
-   } 
-  
-  }else if (select == 4){
-  
-  tama.sleep();
-  
-  }
-  
-  }else if(select==5)
-
-	{
-		select = sc.nextInt();
-		System.out.println("어떤 모험을 할지 모르겠지만 두근두근함");
-
-		tama.adv();
-
-	}else
-	{
-		System.out.println("안녕~~~");
-		break;
-	}
+//	}else if(select == 2) { //음식고르는 곳
+//  
+//  System.out.println("어떤 음식을 주시겠습니까.");
+//  select = sc.nextInt();
+//  
+//  tama.eat();
+//  
+//  
+//  
+//	if(eventNum = 35){
+//	System.out.println("가 독이 든 식사를 먹어버렸습니다.");
+//  tama.fail();
+//  tama.die();
+// }else if(eventNum == 77){
+// System.out.println("가 정말 먹고싶은 음식을 먹었습니다");
+//// * 경험치 추가부분 구현..
+//  }
+//  
+//   
+//  
+//  }else if (select == 3){
+//   System.out.println("어떤 운동을 하겠습니까? ");
+//   select = sc.nextInt();
+//   
+//   tama.exercise();
+//   
+//   if(eventNum = 35){
+// 	System.out.println("가 운동을 하다가 치명상을 입었습니다.");
+//   tama.fail();
+//   tama.die();
+//  }else if(eventNum == 77){
+//  System.out.println("오늘따라 운동이 재밌었음.");
+// //*  경험치 추가부분 구현..
+//   
+//   } 
+//  
+//  }else if (select == 4){
+//  
+//  tama.sleep();
+//  
+//  }
+//  
+//  }else if(select==5)
+//
+//	{
+//		select = sc.nextInt();
+//		System.out.println("어떤 모험을 할지 모르겠지만 두근두근함");
+//
+//		tama.adv();
+//
+//	}else
+//	{
+//		System.out.println("안녕~~~");
+//		break;
+//	}
 
 }
 
