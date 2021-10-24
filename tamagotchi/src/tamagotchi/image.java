@@ -1,12 +1,19 @@
 package tamagotchi;
 
+import java.util.Scanner;
+
 public class image {
 
 	public static void main(String[] args) {
 		
+		System.out.print("1태어날때 그림 / 2.1단계 성장 /3. 2단계 성장 /  4.3단계 성장 / 5. 코인 넣었을때 그림 6. >> "); 
+		
 
+		Scanner sc = new Scanner(System.in);
+		
+		int lv = sc.nextInt();
+		if(lv == 1) {
 
-		if(lv=<1) {
 			System.out.println("         ,,!        \r\n"
 					+ "         .. ;       \r\n"
 					+ "         -@$        \r\n"
@@ -30,150 +37,150 @@ public class image {
 					+ "    ,$=========~    \r\n"
 					+ "      -$*****;");
 			
+		
 			
-		}else if(lv<=10) {
+		}else if(lv==2) {
 			System.out.println("<º))))><");
 			
-		}else if(lv<=20) {
-			System.out.println("\r\n"
-					+ "			\r\n"
-					+ "			System.out.println(\"   !* \");\r\n"
-					+ "			System.out.println(\"   #@ \");\r\n"
-					+ "			System.out.println(\"   ..                         ~##  \");\r\n"
-					+ "			System.out.println(\"              -;$@@@@#!:.   .=@@*\");\r\n"
-					+ "			System.out.println(\"             $@@=-..-!@@@;  $@-@: \");\r\n"
-					+ "			System.out.println(\"    -$~    ~#$~        ,;@$!#.:@.\");\r\n"
-					+ "			System.out.println(\"    ~@;   :@* ,-         .#@! !# \");\r\n"
-					+ "			System.out.println(\"     ,   ,@;  #@.         ~@- $:\");\r\n"
-					+ "			System.out.println(\"         ~@-  ;;          -@- #~\");\r\n"
-					+ "			System.out.println(\"          =@,             =@; *= \");\r\n"
-					+ "			System.out.println(\"           *@;          ,=#$$ ;@ \");\r\n"
-					+ "			System.out.println(\"            ;@@;      -#@#. @=-@-\");\r\n"
-					+ "			System.out.println(\"             .:#@@$#@@@*~   -@$@; \");\r\n"
-					+ "			System.out.println(\"                 -::-        .=##  \");\r\n"
-					+ "			System.out.println(\"                               .,     \");\r\n"
-					+ "		\r\n"
-					+ "			\r\n"
-					+ "		");
+		}else if(lv==3) {
+
 			
-		}else if(lv<=30) {
-			System.out.println("	\r\n"
-					+ "	System.out.println(\"                      ~,      \");\r\n"
-					+ "	System.out.println(\"                     - -\");\r\n"
-					+ "	System.out.println(\"                    ,  ;      \");\r\n"
-					+ "	System.out.println(\"                   :  ,;\");\r\n"
-					+ "	System.out.println(\"                  :  .-;\");\r\n"
-					+ "	System.out.println(\"                 !,--~;;\");\r\n"
-					+ "	System.out.println(\"            !!!!    ;;;!\");\r\n"
-					+ "	System.out.println(\"         .;.            ..; \");\r\n"
-					+ "	System.out.println(\"         .;.            ..; \");\r\n"
-					+ "	System.out.println(\"     ~.      ,~~          .-;\");\r\n"
-					+ "	System.out.println(\"    -        ---;-        .,,,\");\r\n"
-					+ "	System.out.println(\" !. .   @#  ! ~ ;!         ,--\");\r\n"
-					+ "	System.out.println(\"..!!    $=  ! ,.~;        ,,~-\");\r\n"
-					+ "	System.out.println(\".,          ! ,-;;       ,--;,\");\r\n"
-					+ "	System.out.println(\" :            --;! .. . .-,,-:\");\r\n"
-					+ "	System.out.println(\" , ..    ... .!;      ..,,-,-;\");\r\n"
-					+ "	System.out.println(\" -   .         ..   ...-,,,-~~\");\r\n"
-					+ "	System.out.println(\" ;,.      ...........,,----,~,\");\r\n"
-					+ "	System.out.println(\" ;;!.           ,.----,,,--.--\");\r\n"
-					+ "	System.out.println(\" :!~-.          ...........,:,\");\r\n"
-					+ "	System.out.println(\"    !......................~!\");\r\n"
-					+ "	System.out.println(\"     ;~.................~~~~:\");\r\n"
-					+ "	System.out.println(\"       ~~~.........~~~~~~~~~~\");\r\n"
-					+ "	System.out.println(\"        ..!:~:~~~~~~~~~~~~;.\");\r\n"
-					+ "	System.out.println(\"           ,-~;;;;;;;;;;;, \");\r\n"
-					+ "	System.out.println(\"                  ~~~~;;; \");\r\n"
-					+ "	System.out.println(\"                   :. ~;;\");\r\n"
-					+ "	System.out.println(\"                    ; .;:\");\r\n"
-					+ "	System.out.println(\"                     -.;\");\r\n"
-					+ "	System.out.println(\"                      ~!\");\r\n"
-					+ "		");
-			
-		}else if(die) {
-			System.out.println("\r\n"
-					+ "			System.out.println(\"                         .\");\r\n"
-					+ "			System.out.println(\"                   .$@######@$.\");\r\n"
-					+ "			System.out.println(\"                .,=#=.      .##=,. \");\r\n"
-					+ "			System.out.println(\"               .=#-            -#=.\");\r\n"
-					+ "			System.out.println(\"              .=$-              ,$*.\");\r\n"
-					+ "			System.out.println(\"              !$-                ,==,\");\r\n"
-					+ "			System.out.println(\"             ,=~                  -$*.\");\r\n"
-					+ "			System.out.println(\"             !=,                   -*~  \");\r\n"
-					+ "			System.out.println(\"            -=:                     ;; \");\r\n"
-					+ "			System.out.println(\"            ;=,                     ;=- \");\r\n"
-					+ "			System.out.println(\"            ;;   :!!!!      !!!!:   -=;~!!!!. \");\r\n"
-					+ "			System.out.println(\"    .!!!!~  ;;  :#@@@@*    *@@@@#:   ;**!~~$*.\");\r\n"
-					+ "			System.out.println(\"   .=$~~!#~ ;;  *@@@@@@*  *@@@@@@#:  ;#;.  -$,\");\r\n"
-					+ "			System.out.println(\"   .#,  .;! ;; :#@@@@@@@  @@@@@@@@!  ;@:    =,\");\r\n"
-					+ "			System.out.println(\"   .$    ~! ;; !@@@@@@@@  @@@@@@@@!  ;@!.   =$=.\");\r\n"
-					+ "			System.out.println(\"   .$   -#! ;; .=@@@@@@@  @@@@@@@@! ~#@#~   .,#$\");\r\n"
-					+ "			System.out.println(\"   .@*  ~@@$#;  *@@@@@@,  ,@@@@@@*  :@;.      .# \");\r\n"
-					+ "			System.out.println(\"  .@$      ;@@:  =@@@@,    .@@@@=   :;         # \");\r\n"
-					+ "			System.out.println(\"  .$         !:                    :@;  !@~   $@ \");\r\n"
-					+ "			System.out.println(\"  .$    ~=,  ;@~                   :!~$#$-*@-$@.\");\r\n"
-					+ "			System.out.println(\"  .$..  ~###!.*:        @@@       :@@#:    *##.  \");\r\n"
-					+ "			System.out.println(\"   =$=,;!. ~$$#@:       @@#      :@$: \");\r\n"
-					+ "			System.out.println(\"    .==;      :$@:      ===     :@;\");\r\n"
-					+ "			System.out.println(\"                ;#~            -#; \");\r\n"
-					+ "			System.out.println(\"               ,~$!.           -$~~,       -~.\");\r\n"
-					+ "			System.out.println(\"     ~~-     ,~==#!.-. ~  ~  ~ -#!==~,   -:=$!~\");\r\n"
-					+ "			System.out.println(\"   :;$*$-  ,:==!,=!.$, @  @ .$ -= ,!=*::,**~~;#.\");\r\n"
-					+ "			System.out.println(\"  .#;-.*$:;;;;,  =!.$, @  @ .$ -=   ,;;$=!,   $; \");\r\n"
-					+ "			System.out.println(\"  !*   -@=:-   ~;#*.$, @  @ .$ -#;~    -:,    $@\");\r\n"
-					+ "			System.out.println(\"  #,   .:-   ~!$!$#,$, @  @ .$ -$:;!!-        $: \");\r\n"
-					+ "			System.out.println(\" *!      ,;*=!~.-$=@, @  @ .$.== ,~*$*!,    !: \");\r\n"
-					+ "			System.out.println(\"  ,$*!.  .;*--.   ,$@==@==@==@=$,   .--*$-   :* \");\r\n"
-					+ "			System.out.println(\"   ,~$    ;;       ,-----------,       .=~    #.\");\r\n"
-					+ "			System.out.println(\"    ,=    :;                            !~   *@.\");\r\n"
-					+ "			System.out.println(\"    ,@*   :;                            !#- ,$- \");\r\n"
-					+ "			System.out.println(\"     -@$=#!                              *###- \");\r\n"
-					+ "			System.out.println(\"      -@#;     \");												\r\n"
-					+ "		");
-		}else if(conin==1) {
-			System.out.println("\"               ...                ...             \\n\"\r\n"
-					+ "					+ \"            ........           .........          \\n\"\r\n"
-					+ "					+ \"          ............        ............        \\n\"\r\n"
-					+ "					+ \"         ..............      ..............       \\n\"\r\n"
-					+ "					+ \"        ................   .................      \\n\"\r\n"
-					+ "					+ \"        ................. ..................      \\n\"\r\n"
-					+ "					+ \"       ......................................     \\n\"\r\n"
-					+ "					+ \"       ......................................     \\n\"\r\n"
-					+ "					+ \"       ......................................     \\n\"\r\n"
-					+ "					+ \"      .......................................     \\n\"\r\n"
-					+ "					+ \"      .......................................     \\n\"\r\n"
-					+ "					+ \"      .......................................     \\n\"\r\n"
-					+ "					+ \"       ......................................     \\n\"\r\n"
-					+ "					+ \"       ......................................     \\n\"\r\n"
-					+ "					+ \"       ......................................     \\n\"\r\n"
-					+ "					+ \"       .....................................      \\n\"\r\n"
-					+ "					+ \"        ....................................      \\n\"\r\n"
-					+ "					+ \"        ...................................       \\n\"\r\n"
-					+ "					+ \"        ...................................       \\n\"\r\n"
-					+ "					+ \"         .................................        \\n\"\r\n"
-					+ "					+ \"          ................................        \\n\"\r\n"
-					+ "					+ \"           ..............................         \\n\"\r\n"
-					+ "					+ \"            ............................          \\n\"\r\n"
-					+ "					+ \"             ..........................           \\n\"\r\n"
-					+ "					+ \"              ........................            \\n\"\r\n"
-					+ "					+ \"               ......................             \\n\"\r\n"
-					+ "					+ \"                ....................              \\n\"\r\n"
-					+ "					+ \"                ...................               \\n\"\r\n"
-					+ "					+ \"                  ................                \\n\"\r\n"
-					+ "					+ \"                    ............                  \\n\"\r\n"
-					+ "					+ \"                     ..........                   \\n\"\r\n"
-					+ "					+ \"                       ......                     \\n\"\r\n"
-					+ "					+ \"                        ...                       \\n\"\r\n"
-					+ "					+ \"                         .  \"");
+			System.out.println("   !* ");
+			System.out.println("   #@ ");
+			System.out.println("   ..                         ~##  ");
+			System.out.println("              -;$@@@@#!:.   .=@@*");
+			System.out.println("             $@@=-..-!@@@;  $@-@: ");
+			System.out.println("    -$~    ~#$~        ,;@$!#.:@.");
+			System.out.println("    ~@;   :@* ,-         .#@! !# ");
+			System.out.println("     ,   ,@;  #@.         ~@- $:");
+			System.out.println("         ~@-  ;;          -@- #~");
+			System.out.println("          =@,             =@; *= ");
+			System.out.println("           *@;          ,=#$$ ;@ ");
+			System.out.println("            ;@@;      -#@#. @=-@-");
+			System.out.println("             .:#@@$#@@@*~   -@$@; ");
+			System.out.println("                 -::-        .=##  ");
+			System.out.println("                               .,     ");
+		
 			
 		
-		// TODO Auto-generated method stub
+			
+		}else if(lv==4) {
+			
+			System.out.println("                      ~,      ");
+			System.out.println("                     - -");
+			System.out.println("                    ,  ;      ");
+			System.out.println("                   :  ,;");
+			System.out.println("                  :  .-;");
+			System.out.println("                 !,--~;;");
+			System.out.println("            !!!!    ;;;!");
+			System.out.println("         .;.            ..; ");
+			System.out.println("         .;.            ..; ");
+			System.out.println("     ~.      ,~~          .-;");
+			System.out.println("    -        ---;-        .,,,");
+			System.out.println(" !. .   @#  ! ~ ;!         ,--");
+			System.out.println("..!!    $=  ! ,.~;        ,,~-");
+			System.out.println(".,          ! ,-;;       ,--;,");
+			System.out.println(" :            --;! .. . .-,,-:");
+			System.out.println(" , ..    ... .!;      ..,,-,-;");
+			System.out.println(" -   .         ..   ...-,,,-~~");
+			System.out.println(" ;,.      ...........,,----,~,");
+			System.out.println(" ;;!.           ,.----,,,--.--");
+			System.out.println(" :!~-.          ...........,:,");
+			System.out.println("    !......................~!");
+			System.out.println("     ;~.................~~~~:");
+			System.out.println("       ~~~.........~~~~~~~~~~");
+			System.out.println("        ..!:~:~~~~~~~~~~~~;.");
+			System.out.println("           ,-~;;;;;;;;;;;, ");
+			System.out.println("                  ~~~~;;; ");
+			System.out.println("                   :. ~;;");
+			System.out.println("                    ; .;:");
+			System.out.println("                     -.;");
+			System.out.println("                      ~!");
+				
+		}else if(lv==5) {
 
-	}
-
-
-		// TODO Auto-generated method stub
-
+			System.out.println("               ...                ...             \n"
+					+ "            ........           .........          \n"
+					+ "          ............        ............        \n"
+					+ "         ..............      ..............       \n"
+					+ "        ................   .................      \n"
+					+ "        ................. ..................      \n"
+					+ "       ......................................     \n"
+					+ "       ......................................     \n"
+					+ "       ......................................     \n"
+					+ "      .......................................     \n"
+					+ "      .......................................     \n"
+					+ "      .......................................     \n"
+					+ "       ......................................     \n"
+					+ "       ......................................     \n"
+					+ "       ......................................     \n"
+					+ "       .....................................      \n"
+					+ "        ....................................      \n"
+					+ "        ...................................       \n"
+					+ "        ...................................       \n"
+					+ "         .................................        \n"
+					+ "          ................................        \n"
+					+ "           ..............................         \n"
+					+ "            ............................          \n"
+					+ "             ..........................           \n"
+					+ "              ........................            \n"
+					+ "               ......................             \n"
+					+ "                ....................              \n"
+					+ "                ...................               \n"
+					+ "                  ................                \n"
+					+ "                    ............                  \n"
+					+ "                     ..........                   \n"
+					+ "                       ......                     \n"
+					+ "                        ...                       \n"
+					+ "                         .  ");
+		
+		} else if(lv==6) {
+			System.out.println("                         .");
+			System.out.println("                   .$@######@$.");
+			System.out.println("                .,=#=.      .##=,. ");
+			System.out.println("               .=#-            -#=.");
+			System.out.println("              .=$-              ,$*.");
+			System.out.println("              !$-                ,==,");
+			System.out.println("             ,=~                  -$*.");
+			System.out.println("             !=,                   -*~  ");
+			System.out.println("            -=:                     ;; ");
+			System.out.println("            ;=,                     ;=- ");
+			System.out.println("            ;;   :!!!!      !!!!:   -=;~!!!!. ");
+			System.out.println("    .!!!!~  ;;  :#@@@@*    *@@@@#:   ;**!~~$*.");
+			System.out.println("   .=$~~!#~ ;;  *@@@@@@*  *@@@@@@#:  ;#;.  -$,");
+			System.out.println("   .#,  .;! ;; :#@@@@@@@  @@@@@@@@!  ;@:    =,");
+			System.out.println("   .$    ~! ;; !@@@@@@@@  @@@@@@@@!  ;@!.   =$=.");
+			System.out.println("   .$   -#! ;; .=@@@@@@@  @@@@@@@@! ~#@#~   .,#$");
+			System.out.println("   .@*  ~@@$#;  *@@@@@@,  ,@@@@@@*  :@;.      .# ");
+			System.out.println("  .@$      ;@@:  =@@@@,    .@@@@=   :;         # ");
+			System.out.println("  .$         !:                    :@;  !@~   $@ ");
+			System.out.println("  .$    ~=,  ;@~                   :!~$#$-*@-$@.");
+			System.out.println("  .$..  ~###!.*:        @@@       :@@#:    *##.  ");
+			System.out.println("   =$=,;!. ~$$#@:       @@#      :@$: ");
+			System.out.println("    .==;      :$@:      ===     :@;");
+			System.out.println("                ;#~            -#; ");
+			System.out.println("               ,~$!.           -$~~,       -~.");
+			System.out.println("     ~~-     ,~==#!.-. ~  ~  ~ -#!==~,   -:=$!~");
+			System.out.println("   :;$*$-  ,:==!,=!.$, @  @ .$ -= ,!=*::,**~~;#.");
+			System.out.println("  .#;-.*$:;;;;,  =!.$, @  @ .$ -=   ,;;$=!,   $; ");
+			System.out.println("  !*   -@=:-   ~;#*.$, @  @ .$ -#;~    -:,    $@");
+			System.out.println("  #,   .:-   ~!$!$#,$, @  @ .$ -$:;!!-        $: ");
+			System.out.println(" *!      ,;*=!~.-$=@, @  @ .$.== ,~*$*!,    !: ");
+			System.out.println("  ,$*!.  .;*--.   ,$@==@==@==@=$,   .--*$-   :* ");
+			System.out.println("   ,~$    ;;       ,-----------,       .=~    #.");
+			System.out.println("    ,=    :;                            !~   *@.");
+			System.out.println("    ,@*   :;                            !#- ,$- ");
+			System.out.println("     -@$=#!                              *###- ");
+			System.out.println("      -@#;     ");												
+		
+			
+		}
+		
+		
+		
+		
+		
+		
 	}
 
 }
