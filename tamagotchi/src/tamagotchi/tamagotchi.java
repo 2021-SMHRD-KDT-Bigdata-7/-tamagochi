@@ -110,36 +110,26 @@ public class tamagotchi {
 	public VO eat(int num) { // 먹는기능 구현
 		// 먹기
 
-//		System.out.print("현재 체력은 : " + vo.getHp() + "입니다 ");
-//		// 현재 체력 표시
-//
-//		System.out.println(" 무엇을 드시겠습니까?? ");
-//		System.out.print("1.독사과 2.사과 3.삼겹살 4.소고기 5.채소 6.다이어트 >> ");
+		System.out.println("메뉴를 고르시오");
+		System.out.println("[1],[2],[3]");
+		
+		int num3 = sc.nextInt();
 
-		if (num == 1) {
-			vo.setHp(0);
-			System.out.println("사망 하셨습니다. ");
-		} else if (num == 2) {
-			vo.setHp(vo.getHp() + 30);
-			vo.setExp(vo.getExp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
-
-			System.out.println(vo.getHp());
-
-		} else if (num == 3) {
-			vo.setHp(vo.getHp() + 50);
-			System.out.println(vo.getHp());
-
-		} else if (num == 4) {
-			vo.setHp(vo.getHp() + 60);
-			System.out.println(vo.getHp());
-		} else if (num == 5) {
-			vo.setHp(vo.getHp() + 80);
-			System.out.println(vo.getHp());
-
-		} else if (num == 6) {
-			vo.setHp(vo.getHp() - 50);
-			System.out.println(vo.getHp());
+		if (num == num3) {
+			
+				System.out.println("잘먹었습니다");
+				
+				vo.setHp(vo.getHp() + 10);
+				vo.setExp(vo.getExp() + 20);
+				vo.setTurn(vo.getTurn() + 2);
+				
+		} else {
+				System.out.println("맘에들지않아");
+				
+				vo.setHp(vo.getHp() - 5);
+				vo.setExp(vo.getExp() + 0);
+				vo.setTurn(vo.getTurn() + 2);
+				
 		}
 		System.out.println(stat());
 
@@ -148,37 +138,39 @@ public class tamagotchi {
 
 	public void sleep() { // 잠자는 기능 구현
 
-		vo.setHp(vo.getHp() + 60);
-		vo.setExp(vo.getExp() + 60);
-		vo.setTurn(vo.getTurn() + 2);
 		System.out.println(vo.getNick() + "이(가) 잠을 잡니다.");
+		plusHp(30);
+		plusExp(10);
+		plusTurn(4);
 		System.out.println(stat());
 	}
 
 	public VO exercise(int num) { // 운동 기능 구현
 
-		if (num == 1) {
-			System.out.println("줄넘기를 합니다");
-			vo.setHp(vo.getHp() + 60);
-			vo.setExp(vo.getExp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
-			System.out.println(vo.getHp());
 
-		} else if (num == 2) {
-			System.out.println("달리기를 합니다. 으쌰라으쌰");
-			vo.setHp(vo.getHp() + 60);
-			vo.setExp(vo.getExp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
-			System.out.println(vo.getHp());
-		} else if (num == 3) {
-			System.out.println("공놀이를 합니다. 슛!!! 골~인!");
-			vo.setHp(vo.getHp() + 60);
-			vo.setExp(vo.getExp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
-			System.out.println(vo.getHp());
+		System.out.println("메뉴를 고르시오");
+		System.out.println("[1],[2],[3]");
+		
+		int num3 = sc.nextInt();
+
+		if (num == num3) {
+			
+				System.out.println("잘먹었습니다");
+				
+				vo.setHp(vo.getHp() + 10);
+				vo.setExp(vo.getExp() + 20);
+				vo.setTurn(vo.getTurn() + 2);
+				
+		} else {
+				System.out.println("맘에들지않아");
+				
+				vo.setHp(vo.getHp() - 5);
+				vo.setExp(vo.getExp() + 0);
+				vo.setTurn(vo.getTurn() + 2);
+				
 		}
-
 		System.out.println(stat());
+
 		return vo;
 	}
 
@@ -196,6 +188,7 @@ public class tamagotchi {
 			vo.setHp(vo.getHp() + 60);
 			vo.setExp(vo.getExp() + 60);
 			vo.setTurn(vo.getTurn() + 2);
+			
 		} else if (ran == 3) {
 			System.out.println("드래곤 레어를 털어보자");
 			vo.setHp(vo.getHp() + 60);
@@ -206,11 +199,57 @@ public class tamagotchi {
 	}
 
 	public void die() { // 죽는 기능 구현
+		
+		System.out.println("                         .");
+		System.out.println("                   .$@######@$.");
+		System.out.println("                .,=#=.      .##=,. ");
+		System.out.println("               .=#-            -#=.");
+		System.out.println("              .=$-              ,$*.");
+		System.out.println("              !$-                ,==,");
+		System.out.println("             ,=~                  -$*.");
+		System.out.println("             !=,                   -*~  ");
+		System.out.println("            -=:                     ;; ");
+		System.out.println("            ;=,                     ;=- ");
+		System.out.println("            ;;   :!!!!      !!!!:   -=;~!!!!. ");
+		System.out.println("    .!!!!~  ;;  :#@@@@*    *@@@@#:   ;**!~~$*.");
+		System.out.println("   .=$~~!#~ ;;  *@@@@@@*  *@@@@@@#:  ;#;.  -$,");
+		System.out.println("   .#,  .;! ;; :#@@@@@@@  @@@@@@@@!  ;@:    =,");
+		System.out.println("   .$    ~! ;; !@@@@@@@@  @@@@@@@@!  ;@!.   =$=.");
+		System.out.println("   .$   -#! ;; .=@@@@@@@  @@@@@@@@! ~#@#~   .,#$");
+		System.out.println("   .@*  ~@@$#;  *@@@@@@,  ,@@@@@@*  :@;.      .# ");
+		System.out.println("  .@$      ;@@:  =@@@@,    .@@@@=   :;         # ");
+		System.out.println("  .$         !:                    :@;  !@~   $@ ");
+		System.out.println("  .$    ~=,  ;@~                   :!~$#$-*@-$@.");
+		System.out.println("  .$..  ~###!.*:        @@@       :@@#:    *##.  ");
+		System.out.println("   =$=,;!. ~$$#@:       @@#      :@$: ");
+		System.out.println("    .==;      :$@:      ===     :@;");
+		System.out.println("                ;#~            -#; ");
+		System.out.println("               ,~$!.           -$~~,       -~.");
+		System.out.println("     ~~-     ,~==#!.-. ~  ~  ~ -#!==~,   -:=$!~");
+		System.out.println("   :;$*$-  ,:==!,=!.$, @  @ .$ -= ,!=*::,**~~;#.");
+		System.out.println("  .#;-.*$:;;;;,  =!.$, @  @ .$ -=   ,;;$=!,   $; ");
+		System.out.println("  !*   -@=:-   ~;#*.$, @  @ .$ -#;~    -:,    $@");
+		System.out.println("  #,   .:-   ~!$!$#,$, @  @ .$ -$:;!!-        $: ");
+		System.out.println(" *!      ,;*=!~.-$=@, @  @ .$.== ,~*$*!,    !: ");
+		System.out.println("  ,$*!.  .;*--.   ,$@==@==@==@=$,   .--*$-   :* ");
+		System.out.println("   ,~$    ;;       ,-----------,       .=~    #.");
+		System.out.println("    ,=    :;                            !~   *@.");
+		System.out.println("    ,@*   :;                            !#- ,$- ");
+		System.out.println("     -@$=#!                              *###- ");
+		System.out.println("      -@#;     ");										
 		System.out.println(vo.getNick() + "이(가) 죽었습니다.");
+		}
+	public void gg() {
+				
 	}
 
 	public void print() { // 출력 기능 구현
 		System.out.println("현재 상태는 " + all());
+		if (vo.getHp() == 0) {
+			die();
+		}
+		
+		
 	}
 
 	public String all() {
@@ -222,12 +261,8 @@ public class tamagotchi {
 			
 		}
 		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", exp=" + vo.getExp()
-		+ ", turn=" + vo.getTurn() + "Day=" + vo.getDay() +"]";
+		+ ", turn=" + vo.getTurn() + ", Day=" + vo.getDay() +"]";
 	}
-	public void fail() { // 출력 기능 구현
-		System.out.println("돌발상황 발생");
-	}
-
 	public String stat() {
 		return "[hp=" + vo.getHp() + ", exp=" + vo.getExp() + ", turn=" + vo.getTurn() + "]";
 	}
@@ -236,8 +271,8 @@ public class tamagotchi {
 
 		vo.setExp(vo.getExp() + num);
 		if(vo.getExp() >= 100) {
-			vo.setLv(vo.getLv() +1 );
-			vo.setExp(vo.getExp() -100);
+			vo.setLv(vo.getLv() +1);
+			vo.setExp(vo.getExp()%100);
 		}
 		
 		return vo;
@@ -247,7 +282,7 @@ public class tamagotchi {
 		vo.setHp(vo.getHp() + num);
 		
 		if(vo.getHp() > 100) {
-			vo.setHp(vo.getHp()-vo.getHp()%100);
+			vo.setHp(100);
 		}
 		return vo;
 
