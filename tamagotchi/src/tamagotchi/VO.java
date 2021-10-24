@@ -7,22 +7,22 @@ public class VO {
 	private String nick;
 	private int lv;
 	private int hp;
-	private int exp;
+	private int ep;
 	private int turn;
-	private int day;
+	private int days;
 	
 
-	public int getDay() {
-		return day;
+	public int getDays() {
+		return days;
 	}
 
-	public void setDay(int day) {
-		this.day = day;
+	public void setDays(int days) {
+		this.days = days;
 	}
 
 	public VO() {
 		this.hp = 100;
-		this.exp = 0;
+		this.ep = 0;
 		this.turn = 0;
 		
 	}
@@ -34,7 +34,7 @@ public class VO {
 		this.nick = nick;
 		this.lv = 1;
 		this.hp = 100;
-		this.exp = 0;
+		this.ep = 0;
 		this.turn = 0;
 
 	}
@@ -51,11 +51,11 @@ public class VO {
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
-	public int getExp() {
-		return exp;
+	public int getEp() {
+		return ep;
 	}
-	public void setExp(int exp) {
-		this.exp = exp;
+	public void setEp(int ep) {
+		this.ep = ep;
 	}
 	public int getTurn() {
 		return turn;

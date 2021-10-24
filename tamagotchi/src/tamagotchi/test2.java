@@ -38,19 +38,20 @@ public class test2 {
 						select = 0;
 					}
 				} else if (select == 2) {
+					
 					System.out.print("로그인 아이디 생성 : ");
 					String id = sc.next();
 
 					System.out.print("패스워드 : ");
 					String pw = sc.next();
 
-					tama.insert(id, pw);
-
 					System.out.println("캐릭터를 선택하세요");
 					System.out.print("[1]개복치 [2]개복치 [3]개복치");
 					int a = sc.nextInt();
 					System.out.println("개복치의 이름을 내놔라");
 					nick = sc.next();
+					
+					tama.insert(id, pw, nick);
 
 					if (a == 1) {
 						System.out.println("개복치 생성!!!");
@@ -113,7 +114,7 @@ public class test2 {
 
 					if (select == 1) {
 						System.out.println("배고픔 해결");
-						tama.plusExp(10);
+						tama.plusEp(10);
 						tama.plusHp(10);
 						tama.print();
 						break;
@@ -138,7 +139,7 @@ public class test2 {
 
 					if (select == 2) {
 						System.out.println("심심함 해결");
-						tama.plusExp(15);
+						tama.plusEp(15);
 						tama.print();
 
 						break;
@@ -163,7 +164,7 @@ public class test2 {
 
 					if (select == 3) {
 						System.out.println("졸림 해결");
-						tama.plusExp(5);
+						tama.plusEp(5);
 						tama.plusHp(20);
 						tama.print();
 						
@@ -223,6 +224,8 @@ public class test2 {
 				tama.adv();
 
 			} else if (select == 6) {
+				tama.save();
+				System.out.println("저장 완료");
 				break;
 			}
 		}
