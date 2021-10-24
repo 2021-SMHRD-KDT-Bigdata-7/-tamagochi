@@ -1,13 +1,17 @@
 -package tamagotchi;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class test2 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		Random rd = new Random();
+		
 		tamagotchi tama = new tamagotchi();
+		
+		String nick = null;
 		
 		int select = 0;
 		int coin = 0;
@@ -44,6 +48,8 @@ public class test2 {
 				System.out.println("캐릭터를 선택하세요");
 				System.out.print("[1]개복치 [2]개복치 [3]개복치");
 				int a = sc.nextInt();
+				System.out.println("개복치의 이름을 내놔라");
+				nick = sc.next();
 				
 				if (a == 1) {
 					System.out.println("개복치 생성!!!");
@@ -85,17 +91,97 @@ public class test2 {
 //			tama.print();
 		}
 	}
-//	while (coin == 1) { // 게임실행
-//		 랜덤수 생성해서 개복치모드 만들어야함
-//		
+	while (coin == 1) { // 게임실행
+		 // 랜덤수 생성해서 개복치모드 만들어야함
+		
+		eventNum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
+		
+		if(eventNum <= 10) {
+			
+			while(true) {
+				System.out.println(nick + "은 배가 고픔");
+				System.out.println("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 ");
+			
+				select = sc.nextInt();
+			
+				if(select == 2) {
+					System.out.println("배고픔 해결");
+					tama.plusExp(10);
+					tama.plusHp(10);
+					break;
+				} else {
+					System.out.println("욕구해결 안됨");
+					tama.plusHp(-5);
+				}
+			}
+			
+		} else if(eventNum >= 11 && eventNum <= 20) {
+			
+			while(true) {
+				System.out.println(nick + "은 심심함");
+				System.out.println("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 ");
+			
+				select = sc.nextInt();
+			
+				if(select == 3) {
+					System.out.println("심심함 해결");
+					tama.plusExp(15);
+					
+					break;
+				} else {
+					System.out.println("욕구해결 안됨");
+					tama.plusHp(-5);
+				}
+			}
+			
+		} else if(eventNum >= 21 && eventNum <= 30) {
+			
+			while(true) {
+				System.out.println(nick + "졸림");
+				System.out.println("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 ");
+			
+				select = sc.nextInt();
+			
+				if(select == 4) {
+					System.out.println("졸림 해결");
+					tama.plusExp(5);
+					tama.plusHp(20);
+					break;
+				} else {
+					System.out.println("욕구해결 안됨");
+					tama.plusHp(-5);
+				}
+			}
+		} // else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			 
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//			
+//		} else if(eventNum >= 21 && eventNum <= 30) {
+//	
+		else{
+			break;
+		}
+		
 //		
 //		
 //		System.out.println("행동을 선택하세요");
 //		System.out.println("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 [6] 종료하기 ");
+//		
 //		if (select == 1) {
 //		tama.print();
 //	
-//		deadnum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
 //      랜덤변수지정은 위치 지정 필요		
 		
 /*	}else if(select == 2) { //음식고르는 곳

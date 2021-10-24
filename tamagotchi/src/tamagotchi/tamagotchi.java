@@ -59,20 +59,21 @@ public class tamagotchi {
 			e.printStackTrace();
 		}
 	}
+
 	public int login(String id, String pw) {
 		getconn();
-		
+
 		sql = "select * from user1 where id = ? and pw = ?";
-		
+
 		try {
 
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			rs = psmt.executeQuery();
-			if(rs.next()) {
-				result=1;
-				
+			if (rs.next()) {
+				result = 1;
+
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -95,7 +96,7 @@ public class tamagotchi {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
-		
+
 			result = psmt.executeUpdate();
 
 		} catch (Exception e) {
@@ -214,7 +215,7 @@ public class tamagotchi {
 
 	public String all() {
 		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", exp=" + vo.getExp()
-				+ ", turn=" + vo.getTurn() + "]";
+				+ ", turn=" + vo.getTurn() + "Day=" + vo.getDay() +"]";
 	}
 
 	public void fail() { // 출력 기능 구현
@@ -223,5 +224,36 @@ public class tamagotchi {
 
 	public String stat() {
 		return "[hp=" + vo.getHp() + ", exp=" + vo.getExp() + ", turn=" + vo.getTurn() + "]";
+	}
+
+	public VO plusExp(int num) { //추가 경험치 부여
+
+		vo.setExp(vo.getExp() + num);
+		if(vo.getExp() >= 100) {
+			vo.setLv(vo.getLv() +1 );
+			vo.setExp(vo.getExp() -100);
+		}
+		
+		return vo;
+	}
+	public VO plusHp(int num) { //추가 체력 부여
+		
+		vo.setHp(vo.getHp() + num);
+		
+		if(vo.getHp() > 100) {
+			vo.setHp(vo.getHp()-vo.getHp()%100);
+		}
+		return vo;
+
+	}
+	public VO plusTurn(int num) { // 추가 턴 구현
+
+		vo.setTurn(vo.getTurn() + num);
+		
+		if(vo.getTurn() > 20) {
+			vo.setDay(vo.getDay() + 1 );
+			vo.setTurn(vo.getTurn() - 20);
+		}
+		return vo;
 	}
 }

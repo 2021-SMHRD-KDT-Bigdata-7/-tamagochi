@@ -9,7 +9,16 @@ public class VO {
 	private int hp;
 	private int exp;
 	private int turn;
+	private int day;
 	
+
+	public int getDay() {
+		return day;
+	}
+
+	public void setDay(int day) {
+		this.day = day;
+	}
 
 	public VO() {
 		this.hp = 100;
