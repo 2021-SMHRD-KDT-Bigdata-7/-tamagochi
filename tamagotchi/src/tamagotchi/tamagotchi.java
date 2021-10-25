@@ -21,7 +21,6 @@ public class tamagotchi {
 
 	// sql문을 저장하는 변수
 	String sql;
-	
 
 	// 회원 정보 insert 메소드
 	public void getconn() {
@@ -84,6 +83,44 @@ public class tamagotchi {
 		return result;
 	}
 
+	public void select(String id) {
+
+		getconn();
+
+		try {
+			sql = "select * from tamagotchi where id=?";
+
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+
+			while (rs.next()) {
+				vo.setNick(rs.getString(1));
+				vo.setEp(rs.getInt(2));
+				vo.setLv(rs.getInt(3));
+				vo.setHp(rs.getInt(4));
+				vo.setDays(rs.getInt(5));
+				vo.setTurn(rs.getInt(6));
+				vo.setId(rs.getString(7));
+				print();
+
+			}
+
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+		} finally {
+			close();
+
+		}
+
+	}
+	public String Nick() {
+		return vo.getNick();
+		
+	}
+	
 	public int insert(String id, String pw, String nick) {
 		// 하나의 기능이 시작되기 전에 꼭! 데이터베이스 연결 메소드 호출하기
 
@@ -95,12 +132,11 @@ public class tamagotchi {
 		try {
 
 			psmt = conn.prepareStatement(sql);
-			
+
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setString(3, nick);
-			
-			
+
 			result = psmt.executeUpdate();
 
 		} catch (Exception e) {
@@ -110,27 +146,33 @@ public class tamagotchi {
 		}
 		return result;
 	}
-	
-	
-	public int insert2(String nick,int ep,int lv,int hp, int days, int turn) {
+
+	public int insert2(String nick, int ep, int lv, int hp, int days, int turn, String id) {
 		// 하나의 기능이 시작되기 전에 꼭! 데이터베이스 연결 메소드 호출하기
 
+		vo.setNick(nick);
+		vo.setEp(ep);
+		vo.setLv(lv);
+		vo.setHp(hp);
+		vo.setDays(days);
+		vo.setTurn(turn);
+		vo.setId(id);
 		getconn();
 
 		// 3.실행할 SQL문 작성
-		sql = "insert into tamagotchi values(?,?,?,?,?,?)";
+		sql = "insert into tamagotchi values(?,?,?,?,?,?,?)";
 
 		try {
 
 			psmt = conn.prepareStatement(sql);
-			
+
 			psmt.setString(1, nick);
 			psmt.setInt(2, ep);
 			psmt.setInt(3, lv);
 			psmt.setInt(4, hp);
 			psmt.setInt(5, days);
 			psmt.setInt(6, turn);
-			
+			psmt.setString(7, id);
 
 			result = psmt.executeUpdate();
 
@@ -147,24 +189,24 @@ public class tamagotchi {
 
 		System.out.println("메뉴를 고르시오");
 		System.out.println("[1],[2],[3]");
-		
+
 		int num3 = sc.nextInt();
 
 		if (num == num3) {
-			
-				System.out.println("잘먹었습니다");
-				
-				vo.setHp(vo.getHp() + 10);
-				vo.setEp(vo.getEp() + 20);
-				vo.setTurn(vo.getTurn() + 2);
-				
+
+			System.out.println("잘먹었습니다");
+
+			plusHp(10);
+			plusEp(20);
+			plusTurn(2);
+
 		} else {
-				System.out.println("맘에들지않아");
-				
-				vo.setHp(vo.getHp() - 5);
-				vo.setEp(vo.getEp() + 0);
-				vo.setTurn(vo.getTurn() + 2);
-				
+			System.out.println("맘에들지않아");
+
+			plusHp(-5);
+			plusEp(0);
+			plusTurn(2);
+
 		}
 		System.out.println(stat());
 
@@ -182,27 +224,26 @@ public class tamagotchi {
 
 	public VO exercise(int num) { // 운동 기능 구현
 
-
 		System.out.println("메뉴를 고르시오");
 		System.out.println("[1],[2],[3]");
-		
+
 		int num3 = sc.nextInt();
 
 		if (num == num3) {
-			
-				System.out.println("잘먹었습니다");
-				
-				vo.setHp(vo.getHp() + 10);
-				vo.setEp(vo.getEp() + 20);
-				vo.setTurn(vo.getTurn() + 2);
-				
+
+			System.out.println("잘먹었습니다");
+
+			plusHp(10);
+			plusEp(20);
+			plusTurn(2);
+
 		} else {
-				System.out.println("맘에들지않아");
-				
-				vo.setHp(vo.getHp() - 5);
-				vo.setEp(vo.getEp() + 0);
-				vo.setTurn(vo.getTurn() + 2);
-				
+			System.out.println("맘에들지않아");
+
+			plusHp(-5);
+			plusEp(0);
+			plusTurn(2);
+
 		}
 		System.out.println(stat());
 
@@ -214,27 +255,27 @@ public class tamagotchi {
 
 		if (ran == 1) {// hp -30 Ep +40
 			System.out.println("으스스한 동굴을 탐험해보자");
-			vo.setHp(vo.getHp() + 60);
-			vo.setEp(vo.getEp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
+			plusHp(60);
+			plusEp(60);
+			plusTurn(2);
 
 		} else if (ran == 2) {
 			System.out.println("벌레가 많은 밀림!!!");
-			vo.setHp(vo.getHp() + 60);
-			vo.setEp(vo.getEp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
-			
+			plusHp(60);
+			plusEp(60);
+			plusTurn(2);
+
 		} else if (ran == 3) {
 			System.out.println("드래곤 레어를 털어보자");
-			vo.setHp(vo.getHp() + 60);
-			vo.setEp(vo.getEp() + 60);
-			vo.setTurn(vo.getTurn() + 2);
+			plusHp(60);
+			plusEp(60);
+			plusTurn(2);
 		}
 		System.out.println(stat());
 	}
 
 	public void die() { // 죽는 기능 구현
-		
+
 		System.out.println("                         .");
 		System.out.println("                   .$@######@$.");
 		System.out.println("                .,=#=.      .##=,. ");
@@ -271,11 +312,12 @@ public class tamagotchi {
 		System.out.println("    ,=    :;                            !~   *@.");
 		System.out.println("    ,@*   :;                            !#- ,$- ");
 		System.out.println("     -@$=#!                              *###- ");
-		System.out.println("      -@#;     ");										
+		System.out.println("      -@#;     ");
 		System.out.println(vo.getNick() + "이(가) 죽었습니다.");
-		}
+	}
+
 	public void gg() {
-				
+
 	}
 
 	public void print() { // 출력 기능 구현
@@ -283,73 +325,83 @@ public class tamagotchi {
 		if (vo.getHp() == 0) {
 			die();
 		}
-		
-		
+
 	}
 
 	public String all() {
-		if(vo.getLv() < 5) {
-			
-		}else if(vo.getLv() >= 5 && vo.getLv() < 10) {
-			
-		}else if(vo.getLv() >= 10) {
-			
+		if (vo.getLv() < 5) {
+
+		} else if (vo.getLv() >= 5 && vo.getLv() < 10) {
+
+		} else if (vo.getLv() >= 10) {
+
 		}
-		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", ep=" + vo.getEp()
-		+ ", turn=" + vo.getTurn() + ", days=" + vo.getDays() +"]";
+		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", ep=" + vo.getEp() + ", turn="
+				+ vo.getTurn() + ", days=" + vo.getDays() + "]";
 	}
+
 	public String stat() {
 		return "[hp=" + vo.getHp() + ", Ep=" + vo.getEp() + ", turn=" + vo.getTurn() + "]";
 	}
 
-	public VO plusEp(int num) { //추가 경험치 부여
+	public VO plusEp(int num) { // 추가 경험치 부여
 
 		vo.setEp(vo.getEp() + num);
-		if(vo.getEp() >= 100) {
-			vo.setLv(vo.getLv() +1);
-			vo.setEp(vo.getEp()%100);
+		if (vo.getEp() >= 100) {
+			vo.setLv(vo.getLv() + 1);
+			vo.setEp(vo.getEp() % 100);
 		}
-		
+
 		return vo;
 	}
-	public VO plusHp(int num) { //추가 체력 부여
-		
+
+	public VO plusHp(int num) { // 추가 체력 부여
+
 		vo.setHp(vo.getHp() + num);
-		
-		if(vo.getHp() > 100) {
+
+		if (vo.getHp() > 100) {
 			vo.setHp(100);
 		}
 		return vo;
 
 	}
+
 	public VO plusTurn(int num) { // 추가 턴 구현
 
 		vo.setTurn(vo.getTurn() + num);
-		
-		if(vo.getTurn() > 20) {
-			vo.setDays(vo.getDays() + 1 );
+
+		if (vo.getTurn() > 20) {
+			vo.setDays(vo.getDays() + 1);
 			vo.setTurn(vo.getTurn() - 20);
 		}
 		return vo;
 	}
-	
+
 	public VO save() {
-		
+
 		getconn();
 
-		sql = "Update tamagotchi set ep = ? ,lv = ? ,hp = ?,days = ?, turn = ? where nick = ? ";
-		
+		sql = "Update tamagotchi set ep = ? ,lv = ? ,hp = ?, days = ?, turn = ?, id=? where nick = ? ";
+
+		String nick = vo.getNick();
+		int ep = vo.getEp();
+		int lv = vo.getLv();
+		int hp = vo.getHp();
+		int days = vo.getDays();
+		int turn = vo.getTurn();
+		String id = vo.getId();
+
 		try {
 
 			psmt = conn.prepareStatement(sql);
-						
-			psmt.setString(1, vo.getNick());
-			psmt.setInt(2, vo.getEp());
-			psmt.setInt(3, vo.getLv());
-			psmt.setInt(4, vo.getHp());
-			psmt.setInt(5, vo.getDays());
-			psmt.setInt(6, vo.getTurn());
-			
+
+			psmt.setInt(1, ep);
+			psmt.setInt(2, lv);
+			psmt.setInt(3, hp);
+			psmt.setInt(4, days);
+			psmt.setInt(5, turn);
+			psmt.setString(6, id);
+			psmt.setString(7, nick);
 
 			result = psmt.executeUpdate();
 
@@ -359,6 +411,6 @@ public class tamagotchi {
 			close();
 		}
 		return vo;
-		
+
 	}
 }

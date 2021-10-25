@@ -32,6 +32,14 @@ public class test2 {
 					if (tama.login(id, pw) == 1) {
 						System.out.println("환영합니다 " + id + " 님");
 						coin = 1;
+						tama.select(id);
+						
+						// 로그인 된 아이디 비밀번호를 기준으로 해당하는 행 select 해오기
+						// syso 찍어서 최종 업데이트 내용 출력되는지 확인
+						
+						//
+						
+						
 						break;
 					} else {
 						System.out.println("로그인 실패");
@@ -53,7 +61,8 @@ public class test2 {
 					nick = sc.next();
 					
 					tama.insert(id, pw, nick);
-					tama.insert2(nick, 0, 1, 100, 1, 1);
+					tama.insert2(nick, 0, 1, 100, 1, 1,id);
+					
 
 				if (a == 1) {
 						System.out.println("개복치 생성!!!");
@@ -101,7 +110,7 @@ public class test2 {
 			// 랜덤수 생성해서 개복치모드 만들어야함
 
 			eventNum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
-			
+			nick=tama.Nick();
 			if (eventNum <= 10) {
 				
 				System.out.println("돌발 상황 발생!!!");
