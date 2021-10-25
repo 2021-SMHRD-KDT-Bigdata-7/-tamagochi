@@ -116,11 +116,12 @@ public class tamagotchi {
 		}
 
 	}
+
 	public String Nick() {
 		return vo.getNick();
-		
+
 	}
-	
+
 	public int insert(String id, String pw, String nick) {
 		// 하나의 기능이 시작되기 전에 꼭! 데이터베이스 연결 메소드 호출하기
 
@@ -314,16 +315,22 @@ public class tamagotchi {
 		System.out.println("     -@$=#!                              *###- ");
 		System.out.println("      -@#;     ");
 		System.out.println(vo.getNick() + "이(가) 죽었습니다.");
+		save();
+
 	}
 
-	public void gg() {
-
+	public boolean gg() {
+		if (vo.getHp() <= 0) {
+			die();
+			return true;
+		}
+		return false;
 	}
 
 	public void print() { // 출력 기능 구현
 		System.out.println("현재 상태는 " + all());
 		if (vo.getHp() == 0) {
-			die();
+			gg();
 		}
 
 	}

@@ -17,6 +17,8 @@ public class test2 {
 		int coin = 0;
 		int eventNum = 0;
 
+		
+		
 		while (true) {
 			if (select == 0) {
 				System.out.print("[1] 로그인 [2] 회원가입 [3] 랭킹확인 [4] 종료 >> ");
@@ -75,6 +77,8 @@ public class test2 {
 					}
 					System.out.println("환영합니다 " + id + " 님");
 					coin = 1;
+					
+					
 					break;
 
 				} else if (select == 3) {
@@ -107,17 +111,28 @@ public class test2 {
 			}
 		}
 		while (coin == 1) { // 게임실행
+		
 			// 랜덤수 생성해서 개복치모드 만들어야함
 
-			eventNum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
 			nick=tama.Nick();
-			if (eventNum <= 10) {
+			
+				
+				tama.gg();
+
+				if(tama.gg()==true) {
+					break;
+				}else {
+					eventNum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
+				
+				
+				if (eventNum <= 10) {
 				
 				System.out.println("돌발 상황 발생!!!");
 
-				while (true) {
+				while (run) {
 					System.out.println(nick + "은 배가 고픔");
 					System.out.println();
+					System.out.println("첫번째 while");
 					System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
 					System.out.println();
 
@@ -140,9 +155,10 @@ public class test2 {
 				
 				System.out.println("돌발 상황 발생!!!");
 
-				while (true) {
+				while (run) {
 					System.out.println(nick + "은 심심함");
 					System.out.println();
+					System.out.println("두번째 while");
 					System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
 					System.out.println();
 
@@ -165,9 +181,10 @@ public class test2 {
 				
 				System.out.println("돌발 상황 발생!!!");
 
-				while (true) {
+				while (run) {
 					System.out.println(nick + "졸림");
 					System.out.println();
+					System.out.println("세번째 while");
 					System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
 					System.out.println();
 
@@ -205,6 +222,10 @@ public class test2 {
 
 			} else if (eventNum >= 21 && eventNum <= 30) {
 
+			}else if(eventNum==100) {
+				tama.save();
+				System.out.println("저장 완료");
+				break;
 			}
 
 			System.out.print("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 [6] 종료하기 ");
@@ -239,6 +260,7 @@ public class test2 {
 				System.out.println("저장 완료");
 				break;
 			}
+		}
 		}
 	}
 
