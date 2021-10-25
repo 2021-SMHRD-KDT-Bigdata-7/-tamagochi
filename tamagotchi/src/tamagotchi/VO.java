@@ -23,7 +23,7 @@ public class VO {
 	public VO() {
 		this.hp = 100;
 		this.ep = 0;
-		this.turn = 0;
+		this.turn = 1;
 		
 	}
 
@@ -35,7 +35,7 @@ public class VO {
 		this.lv = 1;
 		this.hp = 100;
 		this.ep = 0;
-		this.turn = 0;
+		this.turn = 1;
 
 	}
 

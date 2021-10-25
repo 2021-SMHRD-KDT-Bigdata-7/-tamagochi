@@ -52,6 +52,7 @@ public class test2 {
 					nick = sc.next();
 					
 					tama.insert(id, pw, nick);
+					tama.insert2(0, 1 , 100 , 1 , 1);
 
 					if (a == 1) {
 						System.out.println("개복치 생성!!!");

@@ -110,24 +110,25 @@ public class tamagotchi {
 	}
 	
 	
-	public int insert2() {
+	public int insert2(int ep, int lv, int hp , int days , int turn) {
 		// 하나의 기능이 시작되기 전에 꼭! 데이터베이스 연결 메소드 호출하기
+		// 닉네임 설정시 기본정보 자동저장용
 
 		getconn();
 
 		// 3.실행할 SQL문 작성
-		sql = "insert into tamagotchi values(?,?,?,?,?,?)";
+		sql = "insert into tamagotchi values(?,?,?,?,?)";
 
 		try {
 
 			psmt = conn.prepareStatement(sql);
 			
-			psmt.setString(1, vo.getNick());
-			psmt.setInt(2, vo.getEp());
-			psmt.setInt(3, vo.getLv());
-			psmt.setInt(4, vo.getHp());
-			psmt.setInt(5, vo.getDays());
-			psmt.setInt(6, vo.getTurn());
+			//psmt.setString(1, vo.getNick());
+			psmt.setInt(1, vo.getEp());
+			psmt.setInt(2, vo.getLv());
+			psmt.setInt(3, vo.getHp());
+			psmt.setInt(4, vo.getDays());
+			psmt.setInt(5, vo.getTurn());
 			
 
 			result = psmt.executeUpdate();
