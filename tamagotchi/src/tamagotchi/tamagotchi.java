@@ -236,7 +236,7 @@ public class tamagotchi {
 
 		if (num == num3) {
 			System.out.println();
-			System.out.println("잘먹었습니다");
+			System.out.println("즐거운 운동~");
 			System.out.println();
 
 			plusHp(10);
@@ -344,10 +344,78 @@ public class tamagotchi {
 
 	public String all() {
 		if (vo.getLv() < 5) {
+			System.out.println("         ,,!        \r\n"
+					+ "         .. ;       \r\n"
+					+ "         -@$        \r\n"
+					+ "         -@*        \r\n"
+					+ "         -@*        \r\n"
+					+ "         ,@*        \r\n"
+					+ "     ~*@@@@@@~      \r\n"
+					+ "    ,--=@@@@@@@,,   \r\n"
+					+ "   ;@#:.:@@@@:.-    \r\n"
+					+ "  ~@@=~.~@@@#; :$   \r\n"
+					+ "  $@#=*;*#@-  .!#-  \r\n"
+					+ "  @@@$==$@#==$#@;:  \r\n"
+					+ " *@@@@@@@#.*==$@@@  \r\n"
+					+ " $@@@@@@@@,    @@@  \r\n"
+					+ " $@@@@@@@@@   !@@@  \r\n"
+					+ " *@@@@@@@@@#*$@@@@  \r\n"
+					+ "  @@@@@@@@@@@@@@@#  \r\n"
+					+ "  *@@@@@$=====$@@~  \r\n"
+					+ "  -@@@@========$@-  \r\n"
+					+ "    @#==========-   \r\n"
+					+ "    ,$=========~    \r\n"
+					+ "      -$*****;");
 
 		} else if (vo.getLv() >= 5 && vo.getLv() < 10) {
+			System.out.println("   !* ");
+			System.out.println("   #@ ");
+			System.out.println("   ..                         ~##  ");
+			System.out.println("              -;$@@@@#!:.   .=@@*");
+			System.out.println("             $@@=-..-!@@@;  $@-@: ");
+			System.out.println("    -$~    ~#$~        ,;@$!#.:@.");
+			System.out.println("    ~@;   :@* ,-         .#@! !# ");
+			System.out.println("     ,   ,@;  #@.         ~@- $:");
+			System.out.println("         ~@-  ;;          -@- #~");
+			System.out.println("          =@,             =@; *= ");
+			System.out.println("           *@;          ,=#$$ ;@ ");
+			System.out.println("            ;@@;      -#@#. @=-@-");
+			System.out.println("             .:#@@$#@@@*~   -@$@; ");
+			System.out.println("                 -::-        .=##  ");
+			System.out.println("                               .,     ");
+			
 
 		} else if (vo.getLv() >= 10) {
+			System.out.println("                      ~,      ");
+			System.out.println("                     - -");
+			System.out.println("                    ,  ;      ");
+			System.out.println("                   :  ,;");
+			System.out.println("                  :  .-;");
+			System.out.println("                 !,--~;;");
+			System.out.println("            !!!!    ;;;!");
+			System.out.println("         .;.            ..; ");
+			System.out.println("         .;.            ..; ");
+			System.out.println("     ~.      ,~~          .-;");
+			System.out.println("    -        ---;-        .,,,");
+			System.out.println(" !. .   @#  ! ~ ;!         ,--");
+			System.out.println("..!!    $=  ! ,.~;        ,,~-");
+			System.out.println(".,          ! ,-;;       ,--;,");
+			System.out.println(" :            --;! .. . .-,,-:");
+			System.out.println(" , ..    ... .!;      ..,,-,-;");
+			System.out.println(" -   .         ..   ...-,,,-~~");
+			System.out.println(" ;,.      ...........,,----,~,");
+			System.out.println(" ;;!.           ,.----,,,--.--");
+			System.out.println(" :!~-.          ...........,:,");
+			System.out.println("    !......................~!");
+			System.out.println("     ;~.................~~~~:");
+			System.out.println("       ~~~.........~~~~~~~~~~");
+			System.out.println("        ..!:~:~~~~~~~~~~~~;.");
+			System.out.println("           ,-~;;;;;;;;;;;, ");
+			System.out.println("                  ~~~~;;; ");
+			System.out.println("                   :. ~;;");
+			System.out.println("                    ; .;:");
+			System.out.println("                     -.;");
+			System.out.println("                      ~!");
 
 		}
 		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", ep=" + vo.getEp() + ", turn="
