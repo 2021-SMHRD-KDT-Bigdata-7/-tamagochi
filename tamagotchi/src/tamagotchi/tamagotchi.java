@@ -189,20 +189,24 @@ public class tamagotchi {
 		// 먹기
 
 		System.out.println("메뉴를 고르시오");
-		System.out.println("[1],[2],[3]");
+		System.out.print("[1] 고기, [2] 야채, [3] 생선 ");
 
 		int num3 = sc.nextInt();
 
 		if (num == num3) {
-
+			
+			System.out.println();
 			System.out.println("잘먹었습니다");
+			System.out.println();
 
 			plusHp(10);
 			plusEp(20);
 			plusTurn(2);
 
 		} else {
+			System.out.println();
 			System.out.println("맘에들지않아");
+			System.out.println();
 
 			plusHp(-5);
 			plusEp(0);
@@ -226,20 +230,23 @@ public class tamagotchi {
 	public VO exercise(int num) { // 운동 기능 구현
 
 		System.out.println("메뉴를 고르시오");
-		System.out.println("[1],[2],[3]");
+		System.out.print("[1] 자유영, [2] 접영, [3] 배영 ");
 
 		int num3 = sc.nextInt();
 
 		if (num == num3) {
-
+			System.out.println();
 			System.out.println("잘먹었습니다");
+			System.out.println();
 
 			plusHp(10);
 			plusEp(20);
 			plusTurn(2);
 
 		} else {
+			System.out.println();
 			System.out.println("맘에들지않아");
+			System.out.println();
 
 			plusHp(-5);
 			plusEp(0);
@@ -256,21 +263,21 @@ public class tamagotchi {
 
 		if (ran == 1) {// hp -30 Ep +40
 			System.out.println("으스스한 동굴을 탐험해보자");
-			plusHp(60);
-			plusEp(60);
-			plusTurn(2);
+			plusHp(-40);
+			plusEp(50);
+			plusTurn(6);
 
 		} else if (ran == 2) {
 			System.out.println("벌레가 많은 밀림!!!");
-			plusHp(60);
-			plusEp(60);
-			plusTurn(2);
+			plusHp(-30);
+			plusEp(40);
+			plusTurn(6);
 
 		} else if (ran == 3) {
 			System.out.println("드래곤 레어를 털어보자");
-			plusHp(60);
+			plusHp(-50);
 			plusEp(60);
-			plusTurn(2);
+			plusTurn(6);
 		}
 		System.out.println(stat());
 	}
@@ -322,14 +329,14 @@ public class tamagotchi {
 	public boolean gg() {
 		if (vo.getHp() <= 0) {
 			die();
-			return true;
+			return false;
 		}
-		return false;
+		return true;
 	}
 
 	public void print() { // 출력 기능 구현
 		System.out.println("현재 상태는 " + all());
-		if (vo.getHp() == 0) {
+		if (vo.getHp() <= 0) {
 			gg();
 		}
 

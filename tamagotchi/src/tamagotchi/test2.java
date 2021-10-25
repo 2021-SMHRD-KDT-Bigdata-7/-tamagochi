@@ -16,12 +16,13 @@ public class test2 {
 		int select = 0;
 		int coin = 0;
 		int eventNum = 0;
+		boolean run2 = true;
 
 		
 		
 		while (true) {
 			if (select == 0) {
-				System.out.print("[1] 로그인 [2] 회원가입 [3] 랭킹확인 [4] 종료 >> ");
+				System.out.print("[1] 로그인 [2] 회원가입 [3] 종료 >> ");
 				select = sc.nextInt();
 
 				if (select == 1) {
@@ -35,13 +36,6 @@ public class test2 {
 						System.out.println("환영합니다 " + id + " 님");
 						coin = 1;
 						tama.select(id);
-						
-						// 로그인 된 아이디 비밀번호를 기준으로 해당하는 행 select 해오기
-						// syso 찍어서 최종 업데이트 내용 출력되는지 확인
-						
-						//
-						
-						
 						break;
 					} else {
 						System.out.println("로그인 실패");
@@ -66,24 +60,22 @@ public class test2 {
 					tama.insert2(nick, 0, 1, 100, 1, 1,id);
 					
 
-				if (a == 1) {
-						System.out.println("개복치 생성!!!");
-					} else if (a == 2) {
-						System.out.println("개복치 생성!!!!!");
-					} else if (a == 3) {
-						System.out.println("개복치 등장!!!");
-					} else {
-						System.out.println("그래도 개복치!!!");
-					}
-					System.out.println("환영합니다 " + id + " 님");
-					coin = 1;
-					
+					if (a == 1) {
+							System.out.println("개복치 생성!!!");
+						} else if (a == 2) {
+							System.out.println("개복치 생성!!!!!");
+						} else if (a == 3) {
+							System.out.println("개복치 등장!!!");
+						} else {
+							System.out.println("그래도 개복치!!!");
+						}
+						System.out.println("환영합니다 " + id + " 님");
+						coin = 1;
+						
 					
 					break;
 
-				} else if (select == 3) {
-
-				} else if (select == 4) {
+				}  else if (select == 3) {
 					System.out.println("진짜 갈거야?");
 					System.out.print("[1]응 [2]아니 미안 ");
 					int a = sc.nextInt();
@@ -98,169 +90,170 @@ public class test2 {
 					System.out.println("숫자를 다시 선택해주세요");
 					select = 0;
 				}
-
-//			System.out.println(" 무엇을 드시겠습니까?? ");
-//			System.out.print("1.독사과 2.사과 3.삼겹살 4.소고기 5.채소 6.다이어트 >> "); // 음식 선택지.
-//
-//			tama.eat(tama.num = sc.nextInt());
-//			tama.sleep();
-//			tama.adv();
-//			System.out.println("어떤운동?");
-//			tama.exercise(tama.num = sc.nextInt());
-//			tama.print();
 			}
 		}
 		while (coin == 1) { // 게임실행
 		
 			// 랜덤수 생성해서 개복치모드 만들어야함
 
-			nick=tama.Nick();
-			
-				
-				tama.gg();
+				nick=tama.Nick();		
+				run2 = tama.gg();
 
-				if(tama.gg()==true) {
+				if(run2 == false) {
+					tama.save();
+					System.out.println("저장 완료");
 					break;
-				}else {
+				} else {
 					eventNum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
 				
+					if (eventNum <= 10) {
 				
-				if (eventNum <= 10) {
-				
-				System.out.println("돌발 상황 발생!!!");
+						System.out.println("돌발 상황 발생!!!");
 
-				while (run) {
-					System.out.println(nick + "은 배가 고픔");
-					System.out.println();
-					System.out.println("첫번째 while");
-					System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
-					System.out.println();
+						while (run2) {
+							run2 = tama.gg();
+							if(run2 == false) {
+							break;
+								}
+						System.out.println(nick + "은 배가 고픔");
+						System.out.println();
+						System.out.println("첫번째 while");
+						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
+						System.out.println();
 
-					select = sc.nextInt();
-
-					if (select == 1) {
-						System.out.println("배고픔 해결");
-						tama.plusEp(10);
-						tama.plusHp(10);
-						tama.print();
-						break;
-					} else {
-						System.out.println("욕구해결 안됨");
-						tama.plusHp(-5);
-						tama.print();
-					}
-				}System.out.println();
-
-			} else if (eventNum >= 11 && eventNum <= 20) {
-				
-				System.out.println("돌발 상황 발생!!!");
-
-				while (run) {
-					System.out.println(nick + "은 심심함");
-					System.out.println();
-					System.out.println("두번째 while");
-					System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
-					System.out.println();
-
-					select = sc.nextInt();
-
-					if (select == 2) {
-						System.out.println("심심함 해결");
-						tama.plusEp(15);
-						tama.print();
-
-						break;
-					} else {
-						System.out.println("욕구해결 안됨");
-						tama.plusHp(-5);
-						tama.print();
-					}
-				}System.out.println();
-				
-			} else if (eventNum >= 21 && eventNum <= 30) {
-				
-				System.out.println("돌발 상황 발생!!!");
-
-				while (run) {
-					System.out.println(nick + "졸림");
-					System.out.println();
-					System.out.println("세번째 while");
-					System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
-					System.out.println();
-
-					select = sc.nextInt();
-
-					if (select == 3) {
-						System.out.println("졸림 해결");
-						tama.plusEp(5);
-						tama.plusHp(20);
-						tama.print();
+						select = sc.nextInt();
+	
+						if (select == 1) {
+							System.out.println("배고픔 해결");
+							tama.plusEp(10);
+							tama.plusHp(10);
+							tama.print();
+							break;
+						} else {
+							System.out.println("욕구해결 안됨");
+							tama.plusHp(-50);
+							tama.print();
+						}
+					}System.out.println();
+	
+				} else if (eventNum >= 11 && eventNum <= 20) {
+					
+					System.out.println("돌발 상황 발생!!!");
+	
+					while (run2) {
+						run2 = tama.gg();
+						if(run2 == false) {
+							break;
+						}
+						System.out.println(nick + "은 심심함");
+						System.out.println();
+						System.out.println("두번째 while");
+						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
+						System.out.println();
+	
+						select = sc.nextInt();
+	
+						if (select == 2) {
+							System.out.println("심심함 해결");
+							tama.plusEp(15);
+							tama.print();
+	
+							break;
+						} else {
+							System.out.println("욕구해결 안됨");
+							tama.plusHp(-50);
+							tama.print();
+						}
+					}System.out.println();
+					
+				} else if (eventNum >= 21 && eventNum <= 30) {
+					
+					System.out.println("돌발 상황 발생!!!");
+	
+					while (run2) {
+						run2 = tama.gg(); // -> false
 						
-						break;
-					} else {
-						System.out.println("욕구해결 안됨");
-						tama.plusHp(-5);
+						if(run2 == false) {
+							break;
+						}
+						System.out.println(nick + "졸림");
+						System.out.println();
+						System.out.println("세번째 while");
+						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
+						System.out.println();
+	
+						select = sc.nextInt();
+	
+						if (select == 3) {
+							System.out.println("졸림 해결");
+							tama.plusEp(5);
+							tama.plusHp(20);
+							tama.print();
+							
+							break;
+						} else {
+							System.out.println("욕구해결 안됨");
+							tama.plusHp(-50);
+							tama.print();
+						}
+					}System.out.println();
+	
+				}else if (eventNum == 31 ) {
+	
+				}else if(eventNum==100) {
+					
+				}
+					
+				if ( run2 == false ) {
+					System.out.print("[1] 상태확인 [2] 종료 ");
+					select = sc.nextInt();
+					
+					if (select == 1) {
+	
 						tama.print();
-					}
-				}System.out.println();
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			} else if (eventNum >= 21 && eventNum <= 30) {
-
-			}else if(eventNum==100) {
-				tama.save();
-				System.out.println("저장 완료");
-				break;
-			}
-
-			System.out.print("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 [6] 종료하기 ");
-			select = sc.nextInt();
-
-			if (select == 1) {
-
-				tama.print();
-
-			} else if (select == 2) {
-
-				int num2 = rd.nextInt(3) + 1;
-
-				tama.eat(num2);
-
-			} else if (select == 3) {
-
-				int num2 = rd.nextInt(3) + 1;
-
-				tama.exercise(num2);
-
-			} else if (select == 4) {
+	
+					} else if (select == 2) {
+						
+						tama.save();
+						System.out.println("저장 완료");
+						break;
+					}	
+				} else {
+	
+				System.out.print("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 [6] 종료하기 ");
+				select = sc.nextInt();
+	
+				if (select == 1) {
+	
+					tama.print();
+	
+				} else if (select == 2) {
+	
+					int num2 = rd.nextInt(3) + 1;
+	
+					tama.eat(num2);
+	
+				} else if (select == 3) {
+	
+					int num2 = rd.nextInt(3) + 1;
+	
+					tama.exercise(num2);
+	
+				} else if (select == 4) {
+					
+					tama.sleep();
 				
-				tama.sleep();
-			
-			} else if (select == 5) {
-
-				tama.adv();
-
-			} else if (select == 6) {
-				tama.save();
-				System.out.println("저장 완료");
-				break;
+				} else if (select == 5) {
+	
+					tama.adv();
+	
+				} else if (select == 6) {
+					tama.save();
+					System.out.println("저장 완료");
+					break;
 			}
 		}
+			}
 		}
 	}
 
