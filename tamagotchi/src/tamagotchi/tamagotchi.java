@@ -108,6 +108,37 @@ public class tamagotchi {
 		}
 		return result;
 	}
+	
+	
+	public int insert2() {
+		// 하나의 기능이 시작되기 전에 꼭! 데이터베이스 연결 메소드 호출하기
+
+		getconn();
+
+		// 3.실행할 SQL문 작성
+		sql = "insert into tamagotchi values(?,?,?,?,?,?)";
+
+		try {
+
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, vo.getNick());
+			psmt.setInt(2, vo.getEp());
+			psmt.setInt(3, vo.getLv());
+			psmt.setInt(4, vo.getHp());
+			psmt.setInt(5, vo.getDays());
+			psmt.setInt(6, vo.getTurn());
+			
+
+			result = psmt.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return result;
+	}
 
 	public VO eat(int num) { // 먹는기능 구현
 		// 먹기
@@ -304,7 +335,7 @@ public class tamagotchi {
 		
 		getconn();
 
-		sql = "Update tamagotchi set in (ep = ? ,lv = ? ,hp = ?,days = ?) where nick = ? ";
+		sql = "Update tamagotchi set ep = ? ,lv = ? ,hp = ?,days = ?, turn = ? where nick = ? ";
 		
 		try {
 
@@ -315,6 +346,7 @@ public class tamagotchi {
 			psmt.setInt(3, vo.getLv());
 			psmt.setInt(4, vo.getHp());
 			psmt.setInt(5, vo.getDays());
+			psmt.setInt(6, vo.getTurn());
 			
 
 			result = psmt.executeUpdate();
