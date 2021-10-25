@@ -45,16 +45,17 @@ public class test2 {
 					System.out.print("패스워드 : ");
 					String pw = sc.next();
 
+					tama.insert(id, pw, nick);
+					
 					System.out.println("캐릭터를 선택하세요");
 					System.out.print("[1]개복치 [2]개복치 [3]개복치");
 					int a = sc.nextInt();
 					System.out.println("개복치의 이름을 내놔라");
 					nick = sc.next();
 					
-					tama.insert(id, pw, nick);
-					tama.insert2(0, 1 , 100 , 1 , 1);
+					tama.insert2(nick, 0, 1, 100, 1, 1);
 
-					if (a == 1) {
+				if (a == 1) {
 						System.out.println("개복치 생성!!!");
 					} else if (a == 2) {
 						System.out.println("개복치 생성!!!!!");

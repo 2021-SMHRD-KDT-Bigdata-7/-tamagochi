@@ -21,13 +21,14 @@ public class VO {
 	}
 
 	public VO() {
+		this.lv = 1;
 		this.hp = 100;
 		this.ep = 0;
 		this.turn = 1;
 		
 	}
 
-	public VO(String id, String pw, String nick) {
+	public void VO(String id, String pw, String nick) {
 		
 		this.id = id;
 		this.pw = pw;
