@@ -189,63 +189,30 @@ public class tamagotchi {
 		// 먹기
 
 		System.out.println("메뉴를 고르시오");
-		System.out.print("[1] 고기, [2] 야채, [3] 생선 >> ");
+		System.out.print("[1] 고기, [2] 야채, [3] 생선 ");
 
 		int num3 = sc.nextInt();
-		System.out.println();
 
 		if (num == num3) {
-
-			System.out.println("잘먹었습니다");
 			
-			plusHp(15);
+			System.out.println();
+			System.out.println("잘먹었습니다");
+			System.out.println();
+
+			plusHp(10);
 			plusEp(20);
 			plusTurn(2);
-			System.out.println("                   .;,                  \r\n"
-					+ "             :$$$~$$*$$$$=-             \r\n"
-					+ "         ~$$$$. ~$-   =- ;$.            \r\n"
-					+ "        *$~~$             :$$=.         \r\n"
-					+ "       .$                    =$         \r\n"
-					+ "       *$          -!;        =:        \r\n"
-					+ "     .$=*          $*=!       *$$.      \r\n"
-					+ "     =*              ;=         ;$      \r\n"
-					+ "     $                           $~     \r\n"
-					+ "     $    ===                    $=     \r\n"
-					+ "   :$=    $;:             ~$$~   :*=    \r\n"
-					+ "   $.     $=                ~$    -$    \r\n"
-					+ "   $.                       !~    !=    \r\n"
-					+ "  ,$$:.                         .:$$,   \r\n"
-					+ "   $-=$$$=!;;~,.        ,~;;!=$$$=~$    \r\n"
-					+ "   $     :***=$$$$$$$$$$$=***;.   :=    \r\n"
-					+ "   $.                             !=    \r\n"
-					+ "   =;                             $,    \r\n"
-					+ "   -$                             $     \r\n"
-					+ "    $.                           **     \r\n"
-					+ "    =!                           $-     \r\n"
-					+ "     $                          ;=      \r\n"
-					+ "     !$                         $       \r\n"
-					+ "      $*                       $!       \r\n"
-					+ "       $*                     *$        \r\n"
-					+ "       .$=                   =$         \r\n"
-					+ "         *$*-             ,!$!          \r\n"
-					+ "           *$$,         .$$$.           \r\n"
-					+ "             *!         ,$              \r\n"
-					+ "             ;=         -$              \r\n"
-					+ "             ;$!!!!!!!!!*$              \r\n"
-					+ "              ***********-              \r\n"
-					+ "");
-			
 
 		} else {
-			
+			System.out.println();
 			System.out.println("맘에들지않아");
+			System.out.println();
 
-			plusHp(-10);
+			plusHp(-5);
 			plusEp(0);
 			plusTurn(2);
 
 		}
-		System.out.println();
 		System.out.println(stat());
 
 		return vo;
@@ -263,36 +230,36 @@ public class tamagotchi {
 	public VO exercise(int num) { // 운동 기능 구현
 
 		System.out.println("메뉴를 고르시오");
-		System.out.print("[1] 자유영, [2] 접영, [3] 배영 >> ");
+		System.out.print("[1] 자유영, [2] 접영, [3] 배영 ");
 
 		int num3 = sc.nextInt();
-		System.out.println();
 
 		if (num == num3) {
+			System.out.println();
 			System.out.println("즐거운 운동~");
-			
+			System.out.println();
 
 			plusHp(10);
 			plusEp(20);
 			plusTurn(2);
 
 		} else {
-			
+			System.out.println();
 			System.out.println("맘에들지않아");
+			System.out.println();
 
 			plusHp(-5);
 			plusEp(0);
 			plusTurn(2);
 
 		}
-		System.out.println();
 		System.out.println(stat());
 
 		return vo;
 	}
 
 	public void adv() { // 모험기능 구현
-		int ran = rd.nextInt(5) + 1;
+		int ran = rd.nextInt(3) + 1;
 
 		if (ran == 1) {// hp -30 Ep +40
 			System.out.println("으스스한 동굴을 탐험해보자");
@@ -311,21 +278,6 @@ public class tamagotchi {
 			plusHp(-50);
 			plusEp(60);
 			plusTurn(6);
-		} else if (ran == 4) {
-			System.out.println("낭떠러지에 떨어짐");
-			plusHp(-55);
-			plusEp(-35);
-			plusTurn(6);
-		} else if (ran == 5) {
-			System.out.println("벌레한테 물림");
-			plusHp(-30);
-			plusEp(-10);
-			plusTurn(3);
-		} else if (ran == 6) {
-			System.out.println("팔 짤림");
-			plusHp(-40);
-			plusEp(-30);
-			plusTurn(4);
 		}
 		System.out.println(stat());
 	}
@@ -384,12 +336,13 @@ public class tamagotchi {
 
 	public void print() { // 출력 기능 구현
 		System.out.println("현재 상태는 " + all());
-//		if (vo.getHp() <= 0) {
-//			gg();
-//		}
+		if (vo.getHp() <= 0) {
+			gg();
+		}
 
 	}
-	public void print2() {
+
+	public String all() {
 		if (vo.getLv() < 5) {
 			System.out.println("         ,,!        \r\n"
 					+ "         .. ;       \r\n"
@@ -413,7 +366,8 @@ public class tamagotchi {
 					+ "    @#==========-   \r\n"
 					+ "    ,$=========~    \r\n"
 					+ "      -$*****;");
-
+ 
+			
 		} else if (vo.getLv() >= 5 && vo.getLv() < 10) {
 			System.out.println("   !* ");
 			System.out.println("   #@ ");
@@ -430,6 +384,7 @@ public class tamagotchi {
 			System.out.println("             .:#@@$#@@@*~   -@$@; ");
 			System.out.println("                 -::-        .=##  ");
 			System.out.println("                               .,     ");
+			
 
 		} else if (vo.getLv() >= 10) {
 			System.out.println("                      ~,      ");
@@ -464,11 +419,6 @@ public class tamagotchi {
 			System.out.println("                      ~!");
 
 		}
-		System.out.println("현재 상태는 " + all());
-	}
-
-	public String all() {
-		
 		return " [nick=" + vo.getNick() + ", lv=" + vo.getLv() + ", hp=" + vo.getHp() + ", ep=" + vo.getEp() + ", turn="
 				+ vo.getTurn() + ", days=" + vo.getDays() + "]";
 	}
