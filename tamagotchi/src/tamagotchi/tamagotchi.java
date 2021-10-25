@@ -481,9 +481,7 @@ public class tamagotchi {
 
 	public void print() { // 출력 기능 구현
 		System.out.println("현재 상태는 " + all());
-//		if (vo.getHp() <= 0) {
-//			gg();
-//		}
+		
 
 	}
 	public void print2() {
@@ -561,7 +559,7 @@ public class tamagotchi {
 			System.out.println("                      ~!");
 
 		}
-		
+		System.out.println("현재 상태는 " + all());
 	}
 
 	public String all() {
