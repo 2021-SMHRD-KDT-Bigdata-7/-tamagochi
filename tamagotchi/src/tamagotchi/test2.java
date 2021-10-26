@@ -20,6 +20,10 @@ public class test2 {
 
 		while (true) {
 			if (select == 0) {
+				System.out.println("=============================");
+				System.out.println("========= 개복치 키우기 =========");
+				System.out.println("=============================");
+				System.out.println();
 				System.out.print("[1] 로그인 [2] 회원가입 [3] 종료 >> ");
 				select = sc.nextInt();
 				System.out.println();
@@ -86,11 +90,13 @@ public class test2 {
 
 					System.out.println();
 
-					System.out.println("캐릭터를 선택하세요");
-					System.out.print("[1]개복치 [2]개복치 [3]개복치>> ");
+					System.out.println("= = = = = = = = = = = = = =");
+					System.out.println(" = = = 캐릭터를 선택하세요 = = = ");
+					System.out.println("= = = = = = = = = = = = = =");
+					System.out.print(" [1]개복치 [2]개복치 [3]개복치>> ");
 					int a = sc.nextInt();
 					System.out.println();
-					System.out.print("개복치의 이름을 내놔라>> ");
+					System.out.print("개복치의 이름을 만들어주세요 >> ");
 					nick = sc.next();
 
 					tama.insert(id, pw, nick);
@@ -147,7 +153,7 @@ public class test2 {
 
 				} else if (select == 3) {
 					System.out.println("진짜 갈거야?");
-					System.out.print("[1]응 [2]아니 미안 ");
+					System.out.print("[1]응!!! [2]아니 미안 ");
 					int a = sc.nextInt();
 					if (a == 1) {
 						System.out.println("안녕~~~");
@@ -157,7 +163,7 @@ public class test2 {
 						select = 0;
 					}
 				} else {
-					System.out.println("숫자를 다시 선택해주세요");
+					System.out.println("메뉴를 다시 선택해주세요");
 					select = 0;
 				}
 			}
@@ -286,6 +292,7 @@ public class test2 {
 				if (run2 == false) {
 					System.out.print("[1] 상태확인 [2] 종료 >> ");
 					select = sc.nextInt();
+					System.out.println();
 
 					if (select == 1) {
 
@@ -301,6 +308,7 @@ public class test2 {
 
 					System.out.print("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 [6] 종료하기 ");
 					select = sc.nextInt();
+					System.out.println();
 
 					if (select == 1) {
 
@@ -328,7 +336,12 @@ public class test2 {
 
 					} else if (select == 6) {
 						tama.save();
+						System.out.println("");
 						System.out.println("저장 완료");
+						System.out.println();
+						System.out.println("= = = = = = = = = = = = =");
+						System.out.println(" = = 게임이 종료 되었습니다 = = ");
+						System.out.println("= = = = = = = = = = = = =");
 						break;
 					}
 				}
