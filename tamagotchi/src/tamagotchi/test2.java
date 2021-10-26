@@ -129,6 +129,7 @@ public class test2 {
 						if (run2 == false) {
 							break;
 						}
+						ima.hungry();
 						System.out.println(nick + "은 배가 고픔");
 						System.out.println();
 						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
@@ -165,6 +166,7 @@ public class test2 {
 						if (run2 == false) {
 							break;
 						}
+						ima.boring();
 						System.out.println(nick + "은 심심함");
 						System.out.println();
 						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
@@ -203,6 +205,7 @@ public class test2 {
 						if (run2 == false) {
 							break;
 						}
+						ima.tired();
 						System.out.println(nick + "졸림");
 						System.out.println();
 						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
