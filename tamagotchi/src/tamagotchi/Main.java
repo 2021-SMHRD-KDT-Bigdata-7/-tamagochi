@@ -137,6 +137,18 @@ public class Main {
 						System.out.println();
 
 						if (select == 1) {
+							
+							if (eventNum >= 31 && eventNum <= 40) {
+								System.out.println();
+								System.out.println("¹ä¸Ô´Ù°¡ Ã¼ÇÔ Hp - 20, Exp + 10, Turn + 1");
+								tama.plusHp(-20);
+								tama.plusEp(10);
+								tama.plusTurn(1);
+								tama.print();
+								ima.sad();
+								break;
+
+							} else {
 							ima.dinner();
 							System.out.println(" ¹è°íÇÄ ÇØ°á Hp +20, Exp + 10, Trun + 2 ");
 							System.out.println();
@@ -146,6 +158,7 @@ public class Main {
 							tama.plusTurn(2);
 							tama.print();
 							break;
+							}
 						} else {
 							ima.sad2();
 							System.out.println(" ¿å±¸ÇØ°á ¾ÈµÊ Hp - 40 ");
@@ -214,6 +227,16 @@ public class Main {
 
 						if (select == 3) {
 							ima.bed2();
+							if (eventNum >= 41 && eventNum <= 50) {
+								System.out.println();
+								System.out.println("Ä§´ë¿¡¼­ ¶³¾îÁü Hp - 10, Exp + 10, Turn + 1");
+								tama.plusHp(-10);
+								tama.plusEp(10);
+								tama.plusTurn(1);
+								tama.print();
+								break;
+
+							} else {
 							System.out.println(" Á¹¸² ÇØ°á Hp + 20, Ep + 10, Turn + 5 ");
 							System.out.println();
 
@@ -223,6 +246,7 @@ public class Main {
 							tama.print();
 
 							break;
+							}
 						} else {
 							ima.sad2();
 							System.out.println(" ¿å±¸ÇØ°á ¾ÈµÊ Hp - 40 ");
@@ -232,24 +256,7 @@ public class Main {
 					}
 					System.out.println();
 
-				} else if (eventNum >= 31 && eventNum <= 40) {
-					System.out.println();
-					System.out.println("¹ä¸Ô´Ù°¡ Ã¼ÇÔ Hp - 20, Exp + 10, Turn + 1");
-					tama.plusHp(-20);
-					tama.plusEp(10);
-					tama.plusTurn(1);
-					tama.print();
-					ima.sad();
-
-				} else if (eventNum >= 41 && eventNum <= 50) {
-					System.out.println();
-					System.out.println("Ä§´ë¿¡¼­ ¶³¾îÁü Hp - 10, Exp + 10, Turn + 1");
-					tama.plusHp(-10);
-					tama.plusEp(10);
-					tama.plusTurn(1);
-					tama.print();
-
-				}
+				} 
 
 				if (run2 == false) {
 					System.out.println();
