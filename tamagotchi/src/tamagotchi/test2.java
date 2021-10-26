@@ -183,6 +183,7 @@ public class test2 {
 				eventNum = rd.nextInt(100) + 1; // 개복치 사망 담당할 랜덤수 지정
 
 				if (eventNum <= 10) {
+					System.out.println();
 
 					System.out.println("돌발 상황 발생!!!");
 					System.out.println();
@@ -192,7 +193,7 @@ public class test2 {
 						if (run2 == false) {
 							break;
 						}
-						System.out.println(nick + "은 배가 고픔");
+						System.out.println( nick + "은 배가 고픔");
 						System.out.println();
 						System.out.print("[1] 식사주기 [2] 운동하기 [3]잠자기 >> ");
 						select = sc.nextInt();
@@ -200,14 +201,15 @@ public class test2 {
 
 
 						if (select == 1) {
-							System.out.println("배고픔 해결");
+							System.out.println(" 배고픔 해결 ");
+							System.out.println();
 
 							tama.plusHp(5);
 							tama.plusTurn(2);
 							tama.print();
 							break;
 						} else {
-							System.out.println("욕구해결 안됨");
+							System.out.println(" 욕구해결 안됨 Hp - 40 ");
 							tama.plusHp(-40);
 							tama.print();
 						}
@@ -215,8 +217,9 @@ public class test2 {
 					System.out.println();
 
 				} else if (eventNum >= 11 && eventNum <= 20) {
-
-					System.out.println("돌발 상황 발생!!!");
+					
+					System.out.println();
+					System.out.println("******* 돌발 상황 발생!!! *******");
 					System.out.println();
 
 					while (run2) {
@@ -232,7 +235,8 @@ public class test2 {
 
 
 						if (select == 2) {
-							System.out.println("심심함 해결");
+							System.out.println(" 심심함 해결 ");
+							System.out.println();
 
 							tama.plusHp(5);
 							tama.plusTurn(2);
@@ -240,7 +244,7 @@ public class test2 {
 
 							break;
 						} else {
-							System.out.println("욕구해결 안됨");
+							System.out.println(" 욕구해결 안됨 Hp - 40 ");
 							tama.plusHp(-40);
 							tama.print();
 						}
@@ -248,6 +252,7 @@ public class test2 {
 					System.out.println();
 
 				} else if (eventNum >= 21 && eventNum <= 30) {
+					System.out.println();
 
 					System.out.println("돌발 상황 발생!!!");
 					System.out.println();
@@ -266,7 +271,8 @@ public class test2 {
 
 
 						if (select == 3) {
-							System.out.println("졸림 해결");
+							System.out.println(" 졸림 해결 ");
+							System.out.println();
 
 							tama.plusHp(10);
 							tama.plusTurn(5);
@@ -274,7 +280,7 @@ public class test2 {
 
 							break;
 						} else {
-							System.out.println("욕구해결 안됨");
+							System.out.println(" 욕구해결 안됨 Hp - 40 ");
 							tama.plusHp(-40);
 							tama.print();
 						}
@@ -282,18 +288,23 @@ public class test2 {
 					System.out.println();
 
 				} else if (eventNum >= 31 && eventNum <= 40) {
-					System.out.println("밥먹다가 체함");
+					System.out.println();
+					System.out.println("밥먹다가 체함 Hp - 20");
 					tama.plusHp(-20);
 					tama.plusTurn(1);
+					tama.print();
 
 				} else if (eventNum >= 41 && eventNum <= 50) {
-					System.out.println("침대에서 떨어짐");
+					System.out.println();
+					System.out.println("침대에서 떨어짐 Hp - 10");
 					tama.plusHp(-10);
 					tama.plusTurn(1);
+					tama.print();
 				} 
 
 				if (run2 == false) {
-					System.out.print("[1] 상태확인 [2] 종료 >> ");
+					System.out.println();
+					System.out.print(" [1] 상태확인 [2] 종료 >> ");
 					select = sc.nextInt();
 					System.out.println();
 
@@ -308,7 +319,8 @@ public class test2 {
 						break;
 					}
 				} else {
-
+					
+					System.out.println();
 					System.out.print("[1] 상태확인 [2] 식사 주기 [3]운동하기 [4]잠자기 [5] 모험하기 [6] 종료하기 ");
 					select = sc.nextInt();
 					System.out.println();

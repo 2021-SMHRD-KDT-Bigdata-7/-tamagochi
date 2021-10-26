@@ -571,7 +571,7 @@ public class tamagotchi {
 	public String stat() {
 		return "[ lv="+vo.getLv()+", hp=" + vo.getHp() + ", Ep=" + vo.getEp() + ", turn=" + vo.getTurn() + ", days=" + vo.getDays()+ "]";
 	}
-
+	
 	public VO plusEp(int num) { // 추가 경험치 부여
 
 		vo.setEp(vo.getEp() + num);
