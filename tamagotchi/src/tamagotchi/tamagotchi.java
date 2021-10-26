@@ -195,21 +195,21 @@ public class tamagotchi {
 			if (num == 1) {
 				ima.meet();
 
-				System.out.println("잘먹었습니다");
+				System.out.println(" 잘먹었습니다 Hp + 10, Exp + 20, Turn + 2 ");
 
 				plusHp(10);
 				plusEp(20);
 				plusTurn(2);
 			} else if (num == 2) {
 				ima.apple();
-				System.out.println("잘먹었습니다");
+				System.out.println(" 잘먹었습니다 Hp + 10, Exp + 20, Turn + 2 ");
 
 				plusHp(10);
 				plusEp(20);
 				plusTurn(2);
 			} else if (num == 3) {
 				ima.fish();
-				System.out.println("잘먹었습니다");
+				System.out.println(" 잘먹었습니다 Hp + 10, Exp + 20, Turn + 2 ");
 
 				plusHp(10);
 				plusEp(20);
@@ -218,10 +218,10 @@ public class tamagotchi {
 
 		} else {
 			ima.sad();
-			System.out.println("맘에들지않아 hp-5");
+			System.out.println(" 맘에들지않아 Hp - 5, Exp + 5, Turn + 2 ");
 
 			plusHp(-5);
-			plusEp(0);
+			plusEp(5);
 			plusTurn(2);
 
 		}
@@ -234,7 +234,7 @@ public class tamagotchi {
 	public void sleep() { // 잠자는 기능 구현
 
 		ima.bed();
-		System.out.println(vo.getNick() + "이(가) 잠을 잡니다.");
+		System.out.println(vo.getNick() + "이(가) 잠을 잡니다 Hp + 30, Exp + 10, Turn + 4 ");
 		plusHp(30);
 		plusEp(10);
 		plusTurn(4);
@@ -250,33 +250,33 @@ public class tamagotchi {
 			if (num == 1) {
 				ima.swim1();
 
-				System.out.println("근성장 뿌뿌");
+				System.out.println("근성장 뿌뿌 Hp - 10, Exp + 30, Turn + 2 ");
 
-				plusHp(10);
-				plusEp(20);
+				plusHp(-10);
+				plusEp(30);
 				plusTurn(2);
 			} else if (num == 2) {
 				ima.swim2();
-				System.out.println("근성장 뿌뿌");
+				System.out.println("근성장 뿌뿌 Hp - 10, Exp + 30, Turn + 2 ");
 
 				plusHp(10);
-				plusEp(20);
+				plusEp(30);
 				plusTurn(2);
 			} else if (num == 3) {
 				ima.swim3();
+				System.out.println("근성장 뿌뿌 Hp - 10, Exp + 30, Turn + 2 ");
 
 				plusHp(10);
-				plusEp(20);
+				plusEp(30);
 				plusTurn(2);
-				System.out.println("근성장 뿌뿌");
 			}
 
 		} else {
 			ima.sad();
-			System.out.println("맘에들지않아 hp-5");
+			System.out.println("근손실 hp-5, Exp + 10, Turn + 2 ");
 
 			plusHp(-5);
-			plusEp(0);
+			plusEp(10);
 			plusTurn(2);
 
 		}
@@ -291,7 +291,7 @@ public class tamagotchi {
 
 		if (ran == 1) {// hp -30 Ep +40
 			ima.adv1();
-			System.out.println("으스스한 동굴을 탐험해보자");
+			System.out.println("으스스한 동굴을 탐험해보자 Hp - 40, Exp + 50, Turn + 6 ");
 			plusHp(-40);
 			plusEp(50);
 			plusTurn(6);
@@ -299,7 +299,7 @@ public class tamagotchi {
 
 		} else if (ran == 2) {
 			ima.adv2();
-			System.out.println("벌레가 많은 밀림!!!");
+			System.out.println("벌레가 많은 밀림!!! Hp - 30, Exp + 40, Turn + 6 ");
 			plusHp(-30);
 			plusEp(40);
 			plusTurn(6);
@@ -307,27 +307,30 @@ public class tamagotchi {
 
 		} else if (ran == 3) {
 			ima.adv3();
-			System.out.println("드래곤 레어를 털어보자");
+			System.out.println("드래곤 레어를 털어보자 Hp - 50, Exp + 60, Turn + 6 ");
 			plusHp(-50);
 			plusEp(60);
 			plusTurn(6);
 			
 		} else if (ran == 4) {
 			ima.adv4();
-			System.out.println("낭떠러지에 떨어짐");
+			System.out.println("낭떠러지에 떨어짐 Hp - 55, Exp + 20, Turn + 6 ");
 			plusHp(-55);
+			plusEp(20);
 			plusTurn(6);
 			
 		} else if (ran == 5) {
 			ima.adv5();
-			System.out.println("벌레한테 물림");
+			System.out.println("벌레한테 물림 Hp - 30, Exp + 20, Turn + 3 ");
 			plusHp(-30);
+			plusEp(20);
 			plusTurn(3);
 			
 		} else if (ran == 6) {
 			ima.adv6();
-			System.out.println("다리 다침");
+			System.out.println("다리 다침 Hp - 40, Exp + 20, Turn + 4");
 			plusHp(-40);
+			plusEp(20);
 			plusTurn(4);
 			
 		}

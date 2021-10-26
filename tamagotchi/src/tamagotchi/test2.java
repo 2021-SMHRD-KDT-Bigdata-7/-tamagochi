@@ -121,7 +121,7 @@ public class test2 {
 				if (eventNum <= 10) {
 					System.out.println();
 
-					System.out.println("돌발 상황 발생!!!");
+					System.out.println("******* 돌발 상황 발생!!! *******");
 					System.out.println();
 
 					while (run2) {
@@ -137,10 +137,11 @@ public class test2 {
 
 						if (select == 1) {
 							ima.dinner();
-							System.out.println(" 배고픔 해결 ");
+							System.out.println(" 배고픔 해결 Hp +20, Exp + 10, Trun + 2 ");
 							System.out.println();
 
-							tama.plusHp(5);
+							tama.plusHp(20);
+							tama.plusEp(10);
 							tama.plusTurn(2);
 							tama.print();
 							break;
@@ -172,10 +173,11 @@ public class test2 {
 
 						if (select == 2) {
 							ima.dumbbell();
-							System.out.println(" 심심함 해결 ");
+							System.out.println(" 심심함 해결 Hp + 0, Exp + 10, Turn + 2  ");
 							System.out.println();
 
-							tama.plusHp(5);
+							tama.plusHp(0);
+							tama.plusEp(10);
 							tama.plusTurn(2);
 							tama.print();
 
@@ -192,7 +194,7 @@ public class test2 {
 				} else if (eventNum >= 21 && eventNum <= 30) {
 					System.out.println();
 
-					System.out.println("돌발 상황 발생!!!");
+					System.out.println("******* 돌발 상황 발생!!! *******");
 					System.out.println();
 
 					while (run2) {
@@ -209,10 +211,11 @@ public class test2 {
 
 						if (select == 3) {
 							ima.bed2();
-							System.out.println(" 졸림 해결 ");
+							System.out.println(" 졸림 해결 Hp + 20, Ep + 10, Turn + 5 ");
 							System.out.println();
 
-							tama.plusHp(10);
+							tama.plusHp(20);
+							tama.plusEp(10);
 							tama.plusTurn(5);
 							tama.print();
 
@@ -228,16 +231,18 @@ public class test2 {
 
 				} else if (eventNum >= 31 && eventNum <= 40) {
 					System.out.println();
-					System.out.println("밥먹다가 체함 Hp - 20");
+					System.out.println("밥먹다가 체함 Hp - 20, Exp + 10, Turn + 1");
 					tama.plusHp(-20);
+					tama.plusEp(10);
 					tama.plusTurn(1);
 					tama.print();
 					ima.sad();
 
 				} else if (eventNum >= 41 && eventNum <= 50) {
 					System.out.println();
-					System.out.println("침대에서 떨어짐 Hp - 10");
+					System.out.println("침대에서 떨어짐 Hp - 10, Exp + 10, Turn + 1");
 					tama.plusHp(-10);
+					tama.plusEp(10);
 					tama.plusTurn(1);
 					tama.print();
 
@@ -301,6 +306,8 @@ public class test2 {
 						System.out.println(" = = 게임이 종료 되었습니다 = = ");
 						System.out.println("= = = = = = = = = = = = =");
 						break;
+					} else {
+						System.out.println("메뉴를 다시 선택해주세요");
 					}
 				}
 			}
