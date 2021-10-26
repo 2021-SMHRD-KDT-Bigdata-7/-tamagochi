@@ -1,7 +1,7 @@
 package tamagotchi;
 
 public class image1 {
-	public void meet() {
+	public void meet() { //식사 [1] 고기
 		System.out.println("           ,,,,,.   \r\n" + "          ,$@@@@*.  \r\n" + "         ,$@@@@@@*. \r\n"
 				+ "         :@@@@@@@@, \r\n" + "         !@@@@@@@@, \r\n" + "        -@@@@@@@@@, \r\n"
 				+ "        ~@@@@@@@@@, \r\n" + "       .#@@@@@@@@$, \r\n" + "       ;@@@@@@@@$,  \r\n"
@@ -10,7 +10,7 @@ public class image1 {
 				+ "  .*~  #            \r\n" + "   ,!;*#            \r\n" + "    .--,            \r\n"
 				+ "                    ");
 	}
-	public void apple() {
+	public void apple() { //식사 [2] 야채
 		System.out.println("                \r\n" + "           .-.      \r\n" + "      ,;, ~=@-      \r\n"
 				+ "      .*$ #@#-      \r\n" + "        =#@@;       \r\n" + "        ,@*,        \r\n"
 				+ "    -*$;-@!~;$!-    \r\n" + "   ~@@@@@@@@@@@#,   \r\n" + "   =@@@@@@@@@@@@*   \r\n"
@@ -19,7 +19,7 @@ public class image1 {
 				+ "    $@@@@@@@@@@=    \r\n" + "     $@@@@@@@@$     \r\n" + "     ,*##!*##!.     \r\n"
 				+ "       --  --       \r\n" + "                    ");
 	}
-	public void fish() {
+	public void fish() { //식사 [3] 생선
 		System.out.println("                              \r\n" + "            ,                 \r\n"
 				+ "            @=,               \r\n" + " ,          $@@!--~-,.        \r\n"
 				+ " ==.       .=@@@@@@@@@$~      \r\n" + " ;@@!,.-:*$@@@@@@@@@@@@@#;.   \r\n"
@@ -30,7 +30,7 @@ public class image1 {
 				+ "                              \r\n" + "                              \r\n"
 				+ "                           ");
 	}
-	public void swim1() {
+	public void swim1() { // 운동하기 [1] 다이빙
 		System.out.println("        .                     \r\n" + "       :@;                    \r\n"
 				+ "       ~@@:                   \r\n" + "        *@@,                  \r\n"
 				+ "         #@@.                 \r\n" + "         ~@@$                 \r\n"
@@ -43,7 +43,7 @@ public class image1 {
 				+ "  .~!*!~,-;*!:,-;**:-,:**;-   \r\n" + "  ;@@@@@@@@@@@@@@@@@@@@@@@@-  \r\n"
 				+ "  ~!~,-!=*~,-;=*:,-:==;-,~*,  \r\n" + "                              ");
 	}
-	public void swim2() {
+	public void swim2() { //운동하기 [2] 자유형
 		System.out.println("                              \r\n" + "    ~;:   ,;:   ,;;.  .:;,    \r\n"
 				+ "  :@@@@@$#@@@@$#@@@@##@@@@#-  \r\n" + "  ;#*~!#@@=~;#@#$:~$@@$:~*#-  \r\n"
 				+ "        .     .     ..        \r\n" + "                              \r\n"
@@ -56,7 +56,7 @@ public class image1 {
 				+ "                  .=@@@$      \r\n" + "                    ,;*,      ");
 		
 	}
-	public void swim3() {
+	public void swim3() { //운동하기 [3] 접영
 		System.out.println("\r\n" + "                              \r\n" + "                              \r\n"
 				+ "                              \r\n" + "                              \r\n"
 				+ "                              \r\n" + "                              \r\n"
@@ -73,7 +73,7 @@ public class image1 {
 				+ "                              \r\n" + "                              ");
 		
 	}
-	public void sad() {
+	public void sad() { // 욕구 실패시
 		System.out.println("           ,!$@#$;.           \r\n" + "         !#@@@@@@@@$:         \r\n"
 				+ "       -#@@@@@@@@@@@@=.       \r\n" + "      ~@@@@@@@@@@@@@@@#.      \r\n"
 				+ "     -@@@@@@@@@@@@@@@@@#.     \r\n" + "     #@#~,. @@@@@= .-;@@*     \r\n"
@@ -87,7 +87,7 @@ public class image1 {
 				+ "      .#@@@@@@@@@@@@@@=       \r\n" + "       .=@@@@@@@@@@@@;        \r\n"
 				+ "         ~=@@@@@@@#=,         \r\n" + "            -;**;,            \r\n" + "");
 	}
-	public void adv1() {
+	public void adv1() { //모험 [1] 으스스한 동굴을 탐험해보자
 		System.out.println("                                 \r\n" + "                                        \r\n"
 				+ "                        .               \r\n" + "                      ,@@#,$@#          \r\n"
 				+ "                    .$@@@@@@@@@-        \r\n" + "                    #@@@@@@@@@@@        \r\n"
@@ -103,7 +103,7 @@ public class image1 {
 				+ "                                        \r\n" + "                                        ");
 		
 	}
-	public void adv2() {
+	public void adv2() { //모험 [2] 벌레가 많은 밀림
 		System.out.println("    .               \r\n" + "              !!              \r\n"
 				+ "              !!              \r\n" + "              !!              \r\n"
 				+ "     .        !!        .     \r\n" + "     =:      ~@@~      *=     \r\n"
@@ -121,7 +121,7 @@ public class image1 {
 				+ "              .               \r\n" + "                              ");
 		
 	}
-	public void adv3() {
+	public void adv3() { // 모험 [3] 드래곤 레어를 털어보자
 		System.out.println("                      \r\n" + "                       :!-        ;;-   \r\n"
 				+ "                     ;  @@;       !;##  \r\n" + "                     @* .$@; ,  ::==;$~ \r\n"
 				+ "                     $@=*$@#=#: ~-. =#, \r\n" + "                      @@@@@@@@@,   ~@#  \r\n"
@@ -144,7 +144,7 @@ public class image1 {
 				+ " .#:    .=            .$;  !,           \r\n" + "  .                    .        ");
 		
 	}
-	public void adv4() {
+	public void adv4() { // 모험 [1] 실패시 낭떠러지
 		System.out.println("                                   \r\n"
 				+ "               !-                       \r\n" + "               ,#.                      \r\n"
 				+ "                :;            ,*        \r\n" + "                .*            !@        \r\n"
@@ -159,7 +159,7 @@ public class image1 {
 				+ "         ;$.                            \r\n" + "       :$#:                             \r\n"
 				+ "      !@##-                    ");
 	}
-	public void adv5() {
+	public void adv5() { //모험 [2] 실패시 벌레한테 물림
 		System.out.println("                         ,-!!!!~-    \r\n"
 				+ "                    ,~,             ,*.      .*-  \r\n"
 				+ "                  .:.  ,~,         ~-          ~~ \r\n"
@@ -194,7 +194,7 @@ public class image1 {
 				+ "                       .,--,,--,~--,              ");
 		
 	}
-	public void adv6() {
+	public void adv6() { //모험 [3] 실패시 다리부상
 		System.out.println("                 .######=!!    ~#:   #            \r\n"
 				+ "                 ;###########:~ =#~!*;            \r\n"
 				+ "                :#################$$~             \r\n"
@@ -214,7 +214,7 @@ public class image1 {
 				+ "                         =$$:-  ;##$              \r\n"
 				+ "                         ,.     .,,          ");
 	}
-	public void grade1() {
+	public void grade1() {//첫번째 진화
 		System.out.println("         ,,!        \r\n" + "         .. ;       \r\n" + "         -@$        \r\n"
 				+ "         -@*        \r\n" + "         -@*        \r\n" + "         ,@*        \r\n"
 				+ "     ~*@@@@@@~      \r\n" + "    ,--=@@@@@@@,,   \r\n" + "   ;@#:.:@@@@:.-    \r\n"
@@ -225,7 +225,7 @@ public class image1 {
 				+ "      -$*****;");
 		
 	}
-	public void grade2() {
+	public void grade2() {//두번째 진화
 		System.out.println("   !* ");
 		System.out.println("   #@ ");
 		System.out.println("   ..                         ~##  ");
@@ -242,7 +242,7 @@ public class image1 {
 		System.out.println("                 -::-        .=##  ");
 		System.out.println("                               .,     ");
 	}
-	public void grade3() {
+	public void grade3() {//세번째 진화
 		System.out.println("                      ~,      ");
 		System.out.println("                     - -");
 		System.out.println("                    ,  ;      ");
@@ -274,7 +274,7 @@ public class image1 {
 		System.out.println("                     -.;");
 		System.out.println("                      ~!");
 	}
-	public void bed() {
+	public void bed() { //잠자기 
 		System.out.println("    .~,                                           \r\n"
 				+ "    ;#*.                                          \r\n"
 				+ "    *@$,                                          \r\n"
@@ -299,7 +299,7 @@ public class image1 {
 				+ "    *@$.                                 :@#~     \r\n"
 				+ "    :!;.                                 -!!- ");
 	}
-	public void skull() {
+	public void skull() { // 죽었을때
 		System.out.println("                         .");
 		System.out.println("                   .$@######@$.");
 		System.out.println("                .,=#=.      .##=,. ");
@@ -338,7 +338,7 @@ public class image1 {
 		System.out.println("     -@$=#!                              *###- ");
 		System.out.println("      -@#;     ");
 	}
-	public void heart() {
+	public void heart() { // 게임 실행시 
 		System.out.println("               ...                ...             \n"
 				+ "            ........           .........          \n"
 				+ "          ............        ............        \n"
@@ -374,7 +374,7 @@ public class image1 {
 				+ "                        ...                       \n"
 				+ "                         .  ");
 	}
-	public void dinner() {
+	public void dinner() { // 돌발상황 [1] 식사주기
 		System.out.println("              .:!**!;-                  \r\n"
 				+ "            ,*#@@@@@@@$-                \r\n"
 				+ "           :#@@@####@@@@*.     :*.      \r\n"
@@ -399,7 +399,7 @@ public class image1 {
 				+ "   .,       .;#@@@@@@@!,       ..   .   \r\n"
 				+ "               ,:;!;~                   \r\n" + "");
 	}
-	public void sad2() {
+	public void sad2() { //돌발 상황 실패시
 		System.out.println(
 				"System.out.println(\"           ,!$@#$;.           \\r\\n\" + \"         !#@@@@@@@@$:         \\r\\n\"\r\n"
 						+ "					+ \"       -#@@@@@@@@@@@@=.       \\r\\n\" + \"      ~@@@@@@@@@@@@@@@#.      \\r\\n\"\r\n"
@@ -414,7 +414,7 @@ public class image1 {
 						+ "					+ \"      .#@@@@@@@@@@@@@@=       \\r\\n\" + \"       .=@@@@@@@@@@@@;        \\r\\n\"\r\n"
 						+ "					+ \"         ~=@@@@@@@#=,         \\r\\n\" + \"            -;**;,            \\r\\n\" + \"\");");
 	}
-	public void dumbbell() {
+	public void dumbbell() { // 돌발 상황 [2] 운동하기
 		System.out.println("       ,~            :        \r\n"
 				+ "      ,@@:          *@@,      \r\n" + "      ,@@;          #@@,      \r\n"
 				+ "   ~*-,@@;          #@@,-*-   \r\n" + "   $@@,@@;          #@@,@@$   \r\n"
@@ -424,7 +424,7 @@ public class image1 {
 				+ "   $@@,@@;          #@@,@@$   \r\n" + "   ~:-,@@;          #@@,-:-   \r\n"
 				+ "      ,@@;          #@@,      \r\n" + "      ,@@:          *@@,      \r\n" + "");
 	}
-	public void bed2() {
+	public void bed2() { // 돌발 상황 [3] 잠자기
 		System.out.println(",$=.                                   \r\n"
 				+ " ;@@-                                   \r\n"
 				+ " ;@@~                                   \r\n"
@@ -446,7 +446,7 @@ public class image1 {
 				+ " ;@@~                              ;@@- \r\n"
 				+ " :#$-                              :#$- ");
 	}
-	public void boring() {
+	public void boring() { //돌발 상황 심심함
 		System.out.println("........................................\r\n"
 				+ "..............,~*=$=;,..................\r\n"
 				+ "..........-$@;.      .*#................\r\n"
@@ -480,7 +480,7 @@ public class image1 {
 				+ "........................,=#*......!;....\r\n"
 				+ "........................................");
 	}
-	public void tired() {
+	public void tired() { // 돌발 상황 졸림
 		System.out.println("............,,-,..--,..........\r\n"
 				+ "..........,,-.               ,-,........\r\n"
 				+ ".........,-,                   ,-,......\r\n"
@@ -520,7 +520,7 @@ public class image1 {
 				+ "................,,,,,,,,,,,.............");
 		
 	}
-	public void hungry () {
+	public void hungry () { // 돌발상황 배고픔
 		System.out.println(""
 				+ "......................-**~........................\r\n"
 				+ ".....................:#~~=$:,.....................\r\n"
