@@ -185,6 +185,7 @@ public class test2 {
 				if (eventNum <= 10) {
 
 					System.out.println("돌발 상황 발생!!!");
+					System.out.println();
 
 					while (run2) {
 						run2 = tama.gg();
@@ -216,6 +217,7 @@ public class test2 {
 				} else if (eventNum >= 11 && eventNum <= 20) {
 
 					System.out.println("돌발 상황 발생!!!");
+					System.out.println();
 
 					while (run2) {
 						run2 = tama.gg();
@@ -248,6 +250,7 @@ public class test2 {
 				} else if (eventNum >= 21 && eventNum <= 30) {
 
 					System.out.println("돌발 상황 발생!!!");
+					System.out.println();
 
 					while (run2) {
 						run2 = tama.gg(); // -> false
